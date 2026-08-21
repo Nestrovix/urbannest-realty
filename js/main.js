@@ -61,13 +61,11 @@
       if (k === "tel") el.href = `tel:${S.phoneTel}`;
       else if (k === "mail") el.href = `mailto:${S.email}`;
       else if (k === "whatsapp") el.href = UN.waUrl(el.dataset.waText);
-      else if (k === "map") el.href = S.mapLink;
       else if (k === "instagram") el.href = S.instagram;
       else if (k === "facebook") el.href = S.facebook;
       else if (k === "linkedin") el.href = S.linkedin;
       else if (k === "youtube") el.href = S.youtube;
     });
-    $$("[data-map-embed]", root).forEach((f) => { if (!f.dataset.mapCustom) f.src = S.mapEmbed; });
     $$("[data-hours]", root).forEach((box) => { box.innerHTML = (S.hoursLabel || []).map(([d, h]) => `<div><span>${d}</span><b>${h}</b></div>`).join(""); });
   };
   UN.bind();

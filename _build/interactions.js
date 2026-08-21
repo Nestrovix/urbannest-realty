@@ -127,7 +127,6 @@ module.exports = async (browser, BASE, report) => {
     const agentWa = await p.$eval('[data-p-agent] a.btn--whatsapp', (a) => a.href);
     const facts = await p.$$eval('[data-p-facts] .fact', (f) => f.length);
     const amenities = await p.$$eval('[data-p-amenities] li', (l) => l.length);
-    const mapSrc = await p.$eval('[data-p-map]', (f) => f.getAttribute('src'));
     const fpHref = await p.$eval('[data-p-floorplan-link]', (a) => a.getAttribute('href'));
     const similar = await p.$$eval('[data-p-similar] .prop-card', (c) => c.map((x) => x.dataset.id));
     const crumb = await p.$eval('[data-p-crumb]', (e) => e.textContent.trim());
@@ -159,7 +158,6 @@ module.exports = async (browser, BASE, report) => {
     const success = await p.$eval('#enquiry-success', (s) => s.classList.contains('is-visible'));
     const formHidden = await p.$eval('#enquiry-form', (f) => f.hidden);
     const waAgain = await p.$eval('[data-wa-again]', (a) => a.href);
-    C['property detail'] = { title, h1s, price, docTitle: docTitle.slice(0, 70), mainSrc, thumbs, thumbSwitches: mainAfterThumb !== mainSrc && mainAfterThumb.endsWith('-3.svg'), countTxt, agent, agentWaHasContext: decodeURIComponent(agentWa).includes('Skyline 3 BHK'), facts, amenities, mapHasLocality: decodeURIComponent(mapSrc).includes('Sector 150'), fpHref, similar, crumb, prefillHasTitle: prefill.includes('Skyline 3 BHK'), ld,
       lightbox: { opens: lbOpen, src0: lbSrc0, arrowAdvances: lbSrc1 !== lbSrc0, caption: lbCap, escCloses: lbClosed },
       enquiry: { blockedInvalid: invalid, statusErr, successHiddenBefore, phoneErr, busyState: busy, success, formHidden, waAgainHasDetails: decodeURIComponent(waAgain).includes('Test Buyer') && decodeURIComponent(waAgain).includes('Skyline') } };
     // not-found state
@@ -202,8 +200,6 @@ module.exports = async (browser, BASE, report) => {
     const cbSuccess = await p.$eval('#callback-form .form__status', (s) => s.classList.contains('is-success'));
     const bound = await p.$$eval('[data-href]', (as) => as.filter((a) => a.getAttribute('href') === '#').length);
     const waFloat = await p.$eval('.whatsapp-float', (a) => a.href);
-    const mapSrc = await p.$eval('[data-map-embed]', (f) => f.getAttribute('src'));
-    C['home render'] = { featured, projects, agents, cats, sectionOrder, statsAfterCountUp: stats, callbackBlocked: cbInvalid, callbackSuccess: cbSuccess, unboundDataHref: bound, waFloat: waFloat.slice(0, 40), mapSrc: mapSrc.slice(0, 60) };
     await p.close();
   } catch (e) { fail('home render', e); }
 
@@ -214,7 +210,7 @@ module.exports = async (browser, BASE, report) => {
     const topic = await p.$eval('#c-topic', (s) => s.value), msg = await p.$eval('#c-message', (t) => t.value);
     await p.fill('#c-message', ''); await p.click('#contact-form button[type=submit]'); await p.waitForTimeout(150);
     const blocked = await p.$$eval('#contact-form .field.is-invalid', (f) => f.map((x) => x.querySelector('input,select,textarea').id));
-    await p.fill('#c-name', 'Rahul Test'); await p.fill('#c-phone', '+91 98765 43210'); await p.fill('#c-email', 'bad-email'); await p.fill('#c-message', 'Please send the brochure and price list.');
+    await p.fill('#c-name', 'Rahul Test'); await p.fill('#c-phone', '+91 00000 00000'); await p.fill('#c-email', 'bad-email'); await p.fill('#c-message', 'Please send the brochure and price list.');
     await p.click('#contact-form button[type=submit]'); await p.waitForTimeout(150);
     const emailErr = await p.$eval('#c-email', (i) => i.closest('.field').classList.contains('is-invalid'));
     await p.fill('#c-email', 'rahul@example.com'); await p.click('#contact-form button[type=submit]'); await p.waitForTimeout(1100);

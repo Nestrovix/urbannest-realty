@@ -56,7 +56,7 @@ def header():
     <nav class="nav" aria-label="Primary">
       <ul class="nav__links">{links}</ul>
       <div class="nav__cta">
-        <a class="nav__phone" data-href="tel" href="#"><svg class="ic"><use href="#i-phone"/></svg><span data-bind="phoneDisplay">+91 98XXX XXXXX</span></a>
+        <a class="nav__phone" data-href="tel" href="#"><svg class="ic"><use href="#i-phone"/></svg><span data-bind="phoneDisplay">+91 00000 00000</span></a>
         <a class="btn btn--primary" href="contact.html#consult">Book a Consultation</a>
         <button class="nav__toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><span></span></button>
       </div>
@@ -67,9 +67,9 @@ def header():
   <nav class="mobile-nav__links" aria-label="Mobile">{mlinks}</nav>
   <a class="btn btn--primary btn--lg" href="contact.html#consult">Book a Consultation</a>
   <div class="mobile-nav__meta">
-    <a data-href="tel" href="#"><svg class="ic"><use href="#i-phone"/></svg> <span data-bind="phoneDisplay">+91 98XXX XXXXX</span></a>
+    <a data-href="tel" href="#"><svg class="ic"><use href="#i-phone"/></svg> <span data-bind="phoneDisplay">+91 00000 00000</span></a>
     <a data-href="whatsapp" href="#" target="_blank" rel="noopener"><svg class="ic"><use href="#i-whatsapp"/></svg> Chat on WhatsApp</a>
-    <a data-href="mail" href="#"><svg class="ic"><use href="#i-mail"/></svg> <span data-bind="email">hello@urbannestrealty.in</span></a>
+    <a data-href="mail" href="#"><svg class="ic"><use href="#i-mail"/></svg> <span data-bind="email">hello@urbannestrealty.example</span></a>
   </div>
 </div>'''
 
@@ -98,8 +98,8 @@ def footer(whatsapp_float=True):
       <div><h4>Browse</h4><div class="footer-links"><a href="properties.html?type=apartment">Apartments for sale</a><a href="properties.html?type=villa">Villas</a><a href="properties.html?type=penthouse">Penthouses</a><a href="properties.html?type=plot">Plots</a><a href="properties.html?type=commercial">Commercial</a><a href="properties.html?purpose=rent">Homes for rent</a></div></div>
       <div><h4>Contact</h4><div class="footer-contact">
         <span><svg class="ic"><use href="#i-pin"/></svg><span><span data-bind="addressLine1">[Address]</span><br><span data-bind="addressLine2">Noida, Uttar Pradesh</span></span></span>
-        <a data-href="tel" href="#"><svg class="ic"><use href="#i-phone"/></svg><span data-bind="phoneDisplay">+91 98XXX XXXXX</span></a>
-        <a data-href="mail" href="#"><svg class="ic"><use href="#i-mail"/></svg><span data-bind="email">hello@urbannestrealty.in</span></a>
+        <a data-href="tel" href="#"><svg class="ic"><use href="#i-phone"/></svg><span data-bind="phoneDisplay">+91 00000 00000</span></a>
+        <a data-href="mail" href="#"><svg class="ic"><use href="#i-mail"/></svg><span data-bind="email">hello@urbannestrealty.example</span></a>
         <span><svg class="ic"><use href="#i-clock"/></svg><span>Mon – Sat 10 AM – 7 PM<br>Sun by appointment</span></span>
       </div></div>
     </div>

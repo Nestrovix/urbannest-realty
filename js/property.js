@@ -2,7 +2,7 @@
    URBANNEST REALTY — Property detail page (property.html?id=<id>)
    Renders everything from js/properties-data.js: breadcrumb, title, price,
    gallery (main + thumbs + lightbox), key facts, overview, amenities,
-   floor plan + download, map embed (locality query), agent card,
+   floor plan + download, agent card,
    enquiry form prefill, similar properties, sticky mobile bar, JSON-LD.
    ============================================================ */
 (function () {
@@ -76,15 +76,11 @@
   ];
   $("[data-p-facts]").innerHTML = facts.map(([ic, k, v]) => `<div class="fact"><span><svg class="ic" aria-hidden="true"><use href="#${ic}"/></svg>${k}</span><b>${esc(v)}</b></div>`).join("");
 
-  /* --- overview / amenities / floor plan / map --- */
+  /* --- overview / amenities / floor plan --- */
   $("[data-p-desc]").innerHTML = `<p>${esc(p.description)}</p><p>Listing ID: <b>${esc(p.id)}</b> · Listed on ${new Date(p.listed + "T00:00").toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" })}. Prices are indicative and exclusive of registration, stamp duty and applicable taxes; final terms on confirmation with the owner/developer.</p>`;
   $("[data-p-amenities]").innerHTML = p.amenities.map((a) => `<li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>${esc(a)}</li>`).join("");
   const fpImg = $("[data-p-floorplan]"); fpImg.src = p.floorPlan; fpImg.alt = `Floor plan — ${p.title} (placeholder — replace with the real plan)`;
   const fpLink = $("[data-p-floorplan-link]"); fpLink.href = p.floorPlanPdf || p.floorPlan; if (!p.floorPlanPdf) { fpLink.setAttribute("download", `${p.id}-floor-plan`); } else fpLink.removeAttribute("download");
-  const map = $("[data-p-map]"); const mq = encodeURIComponent(`${p.locality}, India`);
-  map.src = `https://maps.google.com/maps?q=${mq}&t=&z=14&ie=UTF8&iwloc=&output=embed`; map.title = `Map — ${p.locality}`;
-  $("[data-p-maplink]").href = `https://maps.google.com/?q=${mq}`;
-  $("[data-p-mapnote]").textContent = `Map shows the ${p.locality} area. Exact tower / plot location is shared with verified buyers on request.`;
 
   /* --- agent card --- */
   $("[data-p-agent]").innerHTML = `

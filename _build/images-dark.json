@@ -1,0 +1,761 @@
+{
+"out": "assets/images",
+"moods": {
+"charcoal": [
+"#2E2E33",
+"#141416",
+"#55555C"
+],
+"gold": [
+"#9C7A3C",
+"#4A3A1A",
+"#D3B274"
+],
+"stone": [
+"#7F7A71",
+"#45413B",
+"#C2BBAE"
+],
+"slate": [
+"#5A5E68",
+"#26282E",
+"#9AA0AC"
+],
+"bronze": [
+"#7A6240",
+"#3A2E1C",
+"#B8924A"
+]
+},
+"labelColor": "#F6F5F2",
+"images": [
+{
+"name": "hero-home",
+"w": 1920,
+"h": 1080,
+"mood": "charcoal",
+"label": "HERO \u2014 replace: dusk shot of a premium Noida tower skyline / luxury living room",
+"sub": "hero-home.jpg \u00b7 1920\u00d71080"
+},
+{
+"name": "hero-properties",
+"w": 1920,
+"h": 800,
+"mood": "slate",
+"label": "PAGE HERO \u2014 replace: wide shot of a gated residential society",
+"sub": "hero-properties.jpg \u00b7 1920\u00d7800"
+},
+{
+"name": "hero-projects",
+"w": 1920,
+"h": 800,
+"mood": "gold",
+"label": "PAGE HERO \u2014 replace: new-launch tower render / construction site at sunset",
+"sub": "hero-projects.jpg \u00b7 1920\u00d7800"
+},
+{
+"name": "hero-about",
+"w": 1920,
+"h": 800,
+"mood": "stone",
+"label": "PAGE HERO \u2014 replace: the UrbanNest team in the office",
+"sub": "hero-about.jpg \u00b7 1920\u00d7800"
+},
+{
+"name": "hero-agents",
+"w": 1920,
+"h": 800,
+"mood": "charcoal",
+"label": "PAGE HERO \u2014 replace: consultant walking a client through a site",
+"sub": "hero-agents.jpg \u00b7 1920\u00d7800"
+},
+{
+"name": "hero-contact",
+"w": 1920,
+"h": 800,
+"mood": "slate",
+"label": "PAGE HERO \u2014 replace: UrbanNest office reception / meeting room",
+"sub": "hero-contact.jpg \u00b7 1920\u00d7800"
+},
+{
+"name": "cta-consult",
+"w": 1920,
+"h": 800,
+"mood": "charcoal",
+"label": "CTA BACKGROUND \u2014 replace: handshake / keys handover",
+"sub": "cta-consult.jpg \u00b7 1920\u00d7800"
+},
+{
+"name": "about-site-visit",
+"w": 900,
+"h": 1200,
+"mood": "gold",
+"label": "ABOUT \u2014 replace: consultant on a site visit",
+"sub": "about-site-visit.jpg \u00b7 900\u00d71200"
+},
+{
+"name": "office-exterior",
+"w": 1200,
+"h": 900,
+"mood": "stone",
+"label": "LOCATION \u2014 replace: photo of the office building entrance",
+"sub": "office-exterior.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "categories/apartments",
+"w": 900,
+"h": 1100,
+"mood": "charcoal",
+"label": "CATEGORY \u2014 replace: high-rise apartment towers",
+"sub": "categories/apartments.jpg \u00b7 900\u00d71100"
+},
+{
+"name": "categories/villas",
+"w": 900,
+"h": 1100,
+"mood": "gold",
+"label": "CATEGORY \u2014 replace: villa with garden",
+"sub": "categories/villas.jpg \u00b7 900\u00d71100"
+},
+{
+"name": "categories/penthouses",
+"w": 900,
+"h": 1100,
+"mood": "slate",
+"label": "CATEGORY \u2014 replace: penthouse terrace at dusk",
+"sub": "categories/penthouses.jpg \u00b7 900\u00d71100"
+},
+{
+"name": "categories/plots",
+"w": 900,
+"h": 1100,
+"mood": "stone",
+"label": "CATEGORY \u2014 replace: plotted township aerial",
+"sub": "categories/plots.jpg \u00b7 900\u00d71100"
+},
+{
+"name": "categories/commercial",
+"w": 900,
+"h": 1100,
+"mood": "bronze",
+"label": "CATEGORY \u2014 replace: office / retail building",
+"sub": "categories/commercial.jpg \u00b7 900\u00d71100"
+},
+{
+"name": "properties/skyline-3bhk-sector-150-1",
+"w": 1200,
+"h": 900,
+"mood": "charcoal",
+"label": "PHOTO 1/4 \u2014 Skyline 3 BHK with Golf-Course Views \u2014 exterior / facade",
+"sub": "properties/skyline-3bhk-sector-150-1.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/skyline-3bhk-sector-150-2",
+"w": 1200,
+"h": 900,
+"mood": "stone",
+"label": "PHOTO 2/4 \u2014 Skyline 3 BHK with Golf-Course Views \u2014 living room",
+"sub": "properties/skyline-3bhk-sector-150-2.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/skyline-3bhk-sector-150-4",
+"w": 1200,
+"h": 900,
+"mood": "slate",
+"label": "PHOTO 4/4 \u2014 Skyline 3 BHK with Golf-Course Views \u2014 kitchen / balcony view",
+"sub": "properties/skyline-3bhk-sector-150-4.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/corner-4bhk-sector-137-1",
+"w": 1200,
+"h": 900,
+"mood": "stone",
+"label": "PHOTO 1/4 \u2014 Corner 4 BHK Residence with Study \u2014 exterior / facade",
+"sub": "properties/corner-4bhk-sector-137-1.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/corner-4bhk-sector-137-3",
+"w": 1200,
+"h": 900,
+"mood": "slate",
+"label": "PHOTO 3/4 \u2014 Corner 4 BHK Residence with Study \u2014 master bedroom",
+"sub": "properties/corner-4bhk-sector-137-3.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/corner-4bhk-sector-137-4",
+"w": 1200,
+"h": 900,
+"mood": "charcoal",
+"label": "PHOTO 4/4 \u2014 Corner 4 BHK Residence with Study \u2014 kitchen / balcony view",
+"sub": "properties/corner-4bhk-sector-137-4.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/garden-2bhk-sector-76-2",
+"w": 1200,
+"h": 900,
+"mood": "slate",
+"label": "PHOTO 2/4 \u2014 Garden-facing 2 BHK near Sector 76 Metro \u2014 living room",
+"sub": "properties/garden-2bhk-sector-76-2.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/garden-2bhk-sector-76-3",
+"w": 1200,
+"h": 900,
+"mood": "charcoal",
+"label": "PHOTO 3/4 \u2014 Garden-facing 2 BHK near Sector 76 Metro \u2014 master bedroom",
+"sub": "properties/garden-2bhk-sector-76-3.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/garden-2bhk-sector-76-4",
+"w": 1200,
+"h": 900,
+"mood": "stone",
+"label": "PHOTO 4/4 \u2014 Garden-facing 2 BHK near Sector 76 Metro \u2014 kitchen / balcony view",
+"sub": "properties/garden-2bhk-sector-76-4.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/expressway-3bhk-study-1",
+"w": 1200,
+"h": 900,
+"mood": "slate",
+"label": "PHOTO 1/4 \u2014 Expressway-facing 3 BHK + Study \u2014 exterior / facade",
+"sub": "properties/expressway-3bhk-study-1.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/expressway-3bhk-study-2",
+"w": 1200,
+"h": 900,
+"mood": "charcoal",
+"label": "PHOTO 2/4 \u2014 Expressway-facing 3 BHK + Study \u2014 living room",
+"sub": "properties/expressway-3bhk-study-2.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/expressway-3bhk-study-3",
+"w": 1200,
+"h": 900,
+"mood": "stone",
+"label": "PHOTO 3/4 \u2014 Expressway-facing 3 BHK + Study \u2014 master bedroom",
+"sub": "properties/expressway-3bhk-study-3.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/pool-villa-sector-128-1",
+"w": 1200,
+"h": 900,
+"mood": "gold",
+"label": "PHOTO 1/4 \u2014 Luxury Villa with Private Pool \u2014 exterior / facade",
+"sub": "properties/pool-villa-sector-128-1.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/pool-villa-sector-128-2",
+"w": 1200,
+"h": 900,
+"mood": "stone",
+"label": "PHOTO 2/4 \u2014 Luxury Villa with Private Pool \u2014 living room",
+"sub": "properties/pool-villa-sector-128-2.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/pool-villa-sector-128-4",
+"w": 1200,
+"h": 900,
+"mood": "bronze",
+"label": "PHOTO 4/4 \u2014 Luxury Villa with Private Pool \u2014 kitchen / balcony view",
+"sub": "properties/pool-villa-sector-128-4.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/duplex-penthouse-sector-150-1",
+"w": 1200,
+"h": 900,
+"mood": "charcoal",
+"label": "PHOTO 1/4 \u2014 Duplex Penthouse with Terrace Garden \u2014 exterior / facade",
+"sub": "properties/duplex-penthouse-sector-150-1.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/duplex-penthouse-sector-150-3",
+"w": 1200,
+"h": 900,
+"mood": "gold",
+"label": "PHOTO 3/4 \u2014 Duplex Penthouse with Terrace Garden \u2014 master bedroom",
+"sub": "properties/duplex-penthouse-sector-150-3.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/duplex-penthouse-sector-150-4",
+"w": 1200,
+"h": 900,
+"mood": "slate",
+"label": "PHOTO 4/4 \u2014 Duplex Penthouse with Terrace Garden \u2014 kitchen / balcony view",
+"sub": "properties/duplex-penthouse-sector-150-4.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/plot-sector-150-corner-2",
+"w": 1200,
+"h": 900,
+"mood": "slate",
+"label": "PHOTO 2/4 \u2014 Corner Residential Plot, 300 sq yd \u2014 living room",
+"sub": "properties/plot-sector-150-corner-2.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/plot-sector-150-corner-3",
+"w": 1200,
+"h": 900,
+"mood": "stone",
+"label": "PHOTO 3/4 \u2014 Corner Residential Plot, 300 sq yd \u2014 master bedroom",
+"sub": "properties/plot-sector-150-corner-3.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/plot-sector-150-corner-4",
+"w": 1200,
+"h": 900,
+"mood": "bronze",
+"label": "PHOTO 4/4 \u2014 Corner Residential Plot, 300 sq yd \u2014 kitchen / balcony view",
+"sub": "properties/plot-sector-150-corner-4.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/retail-shop-sector-62-1",
+"w": 1200,
+"h": 900,
+"mood": "stone",
+"label": "PHOTO 1/4 \u2014 High-Street Retail Shop, Ground Floor \u2014 exterior / facade",
+"sub": "properties/retail-shop-sector-62-1.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/retail-shop-sector-62-2",
+"w": 1200,
+"h": 900,
+"mood": "slate",
+"label": "PHOTO 2/4 \u2014 High-Street Retail Shop, Ground Floor \u2014 living room",
+"sub": "properties/retail-shop-sector-62-2.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/retail-shop-sector-62-3",
+"w": 1200,
+"h": 900,
+"mood": "charcoal",
+"label": "PHOTO 3/4 \u2014 High-Street Retail Shop, Ground Floor \u2014 master bedroom",
+"sub": "properties/retail-shop-sector-62-3.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/office-it-park-sector-62-1",
+"w": 1200,
+"h": 900,
+"mood": "slate",
+"label": "PHOTO 1/4 \u2014 Furnished Office Space in IT Park \u2014 exterior / facade",
+"sub": "properties/office-it-park-sector-62-1.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/office-it-park-sector-62-2",
+"w": 1200,
+"h": 900,
+"mood": "charcoal",
+"label": "PHOTO 2/4 \u2014 Furnished Office Space in IT Park \u2014 living room",
+"sub": "properties/office-it-park-sector-62-2.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/office-it-park-sector-62-4",
+"w": 1200,
+"h": 900,
+"mood": "stone",
+"label": "PHOTO 4/4 \u2014 Furnished Office Space in IT Park \u2014 kitchen / balcony view",
+"sub": "properties/office-it-park-sector-62-4.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/smart-2bhk-greater-noida-west-1",
+"w": 1200,
+"h": 900,
+"mood": "stone",
+"label": "PHOTO 1/4 \u2014 Smart 2 BHK near Upcoming Metro \u2014 exterior / facade",
+"sub": "properties/smart-2bhk-greater-noida-west-1.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/smart-2bhk-greater-noida-west-3",
+"w": 1200,
+"h": 900,
+"mood": "slate",
+"label": "PHOTO 3/4 \u2014 Smart 2 BHK near Upcoming Metro \u2014 master bedroom",
+"sub": "properties/smart-2bhk-greater-noida-west-3.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/smart-2bhk-greater-noida-west-4",
+"w": 1200,
+"h": 900,
+"mood": "charcoal",
+"label": "PHOTO 4/4 \u2014 Smart 2 BHK near Upcoming Metro \u2014 kitchen / balcony view",
+"sub": "properties/smart-2bhk-greater-noida-west-4.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/premium-3bhk-greater-noida-west-2",
+"w": 1200,
+"h": 900,
+"mood": "slate",
+"label": "PHOTO 2/4 \u2014 Premium 3 BHK in New Tower \u2014 living room",
+"sub": "properties/premium-3bhk-greater-noida-west-2.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/premium-3bhk-greater-noida-west-3",
+"w": 1200,
+"h": 900,
+"mood": "charcoal",
+"label": "PHOTO 3/4 \u2014 Premium 3 BHK in New Tower \u2014 master bedroom",
+"sub": "properties/premium-3bhk-greater-noida-west-3.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/premium-3bhk-greater-noida-west-4",
+"w": 1200,
+"h": 900,
+"mood": "stone",
+"label": "PHOTO 4/4 \u2014 Premium 3 BHK in New Tower \u2014 kitchen / balcony view",
+"sub": "properties/premium-3bhk-greater-noida-west-4.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/independent-villa-sector-128-1",
+"w": 1200,
+"h": 900,
+"mood": "bronze",
+"label": "PHOTO 1/4 \u2014 Independent Villa on the Expressway \u2014 exterior / facade",
+"sub": "properties/independent-villa-sector-128-1.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/independent-villa-sector-128-2",
+"w": 1200,
+"h": 900,
+"mood": "gold",
+"label": "PHOTO 2/4 \u2014 Independent Villa on the Expressway \u2014 living room",
+"sub": "properties/independent-villa-sector-128-2.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/independent-villa-sector-128-3",
+"w": 1200,
+"h": 900,
+"mood": "stone",
+"label": "PHOTO 3/4 \u2014 Independent Villa on the Expressway \u2014 master bedroom",
+"sub": "properties/independent-villa-sector-128-3.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/sky-deck-penthouse-sector-137-1",
+"w": 1200,
+"h": 900,
+"mood": "slate",
+"label": "PHOTO 1/4 \u2014 Penthouse with Sky Deck \u2014 exterior / facade",
+"sub": "properties/sky-deck-penthouse-sector-137-1.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/sky-deck-penthouse-sector-137-2",
+"w": 1200,
+"h": 900,
+"mood": "charcoal",
+"label": "PHOTO 2/4 \u2014 Penthouse with Sky Deck \u2014 living room",
+"sub": "properties/sky-deck-penthouse-sector-137-2.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/sky-deck-penthouse-sector-137-4",
+"w": 1200,
+"h": 900,
+"mood": "gold",
+"label": "PHOTO 4/4 \u2014 Penthouse with Sky Deck \u2014 kitchen / balcony view",
+"sub": "properties/sky-deck-penthouse-sector-137-4.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/4bhk-golf-course-road-gurgaon-1",
+"w": 1200,
+"h": 900,
+"mood": "stone",
+"label": "PHOTO 1/4 \u2014 4 BHK on Golf Course Road \u2014 exterior / facade",
+"sub": "properties/4bhk-golf-course-road-gurgaon-1.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/4bhk-golf-course-road-gurgaon-3",
+"w": 1200,
+"h": 900,
+"mood": "slate",
+"label": "PHOTO 3/4 \u2014 4 BHK on Golf Course Road \u2014 master bedroom",
+"sub": "properties/4bhk-golf-course-road-gurgaon-3.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/4bhk-golf-course-road-gurgaon-4",
+"w": 1200,
+"h": 900,
+"mood": "charcoal",
+"label": "PHOTO 4/4 \u2014 4 BHK on Golf Course Road \u2014 kitchen / balcony view",
+"sub": "properties/4bhk-golf-course-road-gurgaon-4.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/township-plot-ghaziabad-2",
+"w": 1200,
+"h": 900,
+"mood": "slate",
+"label": "PHOTO 2/4 \u2014 Plot in Gated Township, 200 sq yd \u2014 living room",
+"sub": "properties/township-plot-ghaziabad-2.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/township-plot-ghaziabad-3",
+"w": 1200,
+"h": 900,
+"mood": "stone",
+"label": "PHOTO 3/4 \u2014 Plot in Gated Township, 200 sq yd \u2014 master bedroom",
+"sub": "properties/township-plot-ghaziabad-3.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/township-plot-ghaziabad-4",
+"w": 1200,
+"h": 900,
+"mood": "bronze",
+"label": "PHOTO 4/4 \u2014 Plot in Gated Township, 200 sq yd \u2014 kitchen / balcony view",
+"sub": "properties/township-plot-ghaziabad-4.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/furnished-3bhk-rent-sector-137-1",
+"w": 1200,
+"h": 900,
+"mood": "slate",
+"label": "PHOTO 1/4 \u2014 Fully Furnished 3 BHK for Rent \u2014 exterior / facade",
+"sub": "properties/furnished-3bhk-rent-sector-137-1.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/furnished-3bhk-rent-sector-137-2",
+"w": 1200,
+"h": 900,
+"mood": "charcoal",
+"label": "PHOTO 2/4 \u2014 Fully Furnished 3 BHK for Rent \u2014 living room",
+"sub": "properties/furnished-3bhk-rent-sector-137-2.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/furnished-3bhk-rent-sector-137-3",
+"w": 1200,
+"h": 900,
+"mood": "stone",
+"label": "PHOTO 3/4 \u2014 Fully Furnished 3 BHK for Rent \u2014 master bedroom",
+"sub": "properties/furnished-3bhk-rent-sector-137-3.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/2bhk-rent-sector-76-1",
+"w": 1200,
+"h": 900,
+"mood": "charcoal",
+"label": "PHOTO 1/4 \u2014 2 BHK for Rent near Metro \u2014 exterior / facade",
+"sub": "properties/2bhk-rent-sector-76-1.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/2bhk-rent-sector-76-2",
+"w": 1200,
+"h": 900,
+"mood": "stone",
+"label": "PHOTO 2/4 \u2014 2 BHK for Rent near Metro \u2014 living room",
+"sub": "properties/2bhk-rent-sector-76-2.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/2bhk-rent-sector-76-4",
+"w": 1200,
+"h": 900,
+"mood": "slate",
+"label": "PHOTO 4/4 \u2014 2 BHK for Rent near Metro \u2014 kitchen / balcony view",
+"sub": "properties/2bhk-rent-sector-76-4.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/villa-rent-sector-128-1",
+"w": 1200,
+"h": 900,
+"mood": "stone",
+"label": "PHOTO 1/4 \u2014 Furnished Villa for Rent \u2014 exterior / facade",
+"sub": "properties/villa-rent-sector-128-1.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/villa-rent-sector-128-3",
+"w": 1200,
+"h": 900,
+"mood": "bronze",
+"label": "PHOTO 3/4 \u2014 Furnished Villa for Rent \u2014 master bedroom",
+"sub": "properties/villa-rent-sector-128-3.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/villa-rent-sector-128-4",
+"w": 1200,
+"h": 900,
+"mood": "gold",
+"label": "PHOTO 4/4 \u2014 Furnished Villa for Rent \u2014 kitchen / balcony view",
+"sub": "properties/villa-rent-sector-128-4.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/office-floor-lease-sector-62-2",
+"w": 1200,
+"h": 900,
+"mood": "stone",
+"label": "PHOTO 2/4 \u2014 Fitted Office Floor for Lease \u2014 living room",
+"sub": "properties/office-floor-lease-sector-62-2.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/office-floor-lease-sector-62-3",
+"w": 1200,
+"h": 900,
+"mood": "slate",
+"label": "PHOTO 3/4 \u2014 Fitted Office Floor for Lease \u2014 master bedroom",
+"sub": "properties/office-floor-lease-sector-62-3.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/office-floor-lease-sector-62-4",
+"w": 1200,
+"h": 900,
+"mood": "charcoal",
+"label": "PHOTO 4/4 \u2014 Fitted Office Floor for Lease \u2014 kitchen / balcony view",
+"sub": "properties/office-floor-lease-sector-62-4.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/studio-rent-noida-expressway-1",
+"w": 1200,
+"h": 900,
+"mood": "slate",
+"label": "PHOTO 1/4 \u2014 1 BHK Studio for Rent \u2014 exterior / facade",
+"sub": "properties/studio-rent-noida-expressway-1.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/studio-rent-noida-expressway-2",
+"w": 1200,
+"h": 900,
+"mood": "charcoal",
+"label": "PHOTO 2/4 \u2014 1 BHK Studio for Rent \u2014 living room",
+"sub": "properties/studio-rent-noida-expressway-2.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/studio-rent-noida-expressway-3",
+"w": 1200,
+"h": 900,
+"mood": "stone",
+"label": "PHOTO 3/4 \u2014 1 BHK Studio for Rent \u2014 master bedroom",
+"sub": "properties/studio-rent-noida-expressway-3.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/penthouse-rent-sector-150-1",
+"w": 1200,
+"h": 900,
+"mood": "slate",
+"label": "PHOTO 1/4 \u2014 Penthouse for Rent with Terrace \u2014 exterior / facade",
+"sub": "properties/penthouse-rent-sector-150-1.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/penthouse-rent-sector-150-2",
+"w": 1200,
+"h": 900,
+"mood": "charcoal",
+"label": "PHOTO 2/4 \u2014 Penthouse for Rent with Terrace \u2014 living room",
+"sub": "properties/penthouse-rent-sector-150-2.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/penthouse-rent-sector-150-4",
+"w": 1200,
+"h": 900,
+"mood": "gold",
+"label": "PHOTO 4/4 \u2014 Penthouse for Rent with Terrace \u2014 kitchen / balcony view",
+"sub": "properties/penthouse-rent-sector-150-4.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/3bhk-rent-greater-noida-west-1",
+"w": 1200,
+"h": 900,
+"mood": "stone",
+"label": "PHOTO 1/4 \u2014 3 BHK for Rent in Ready Society \u2014 exterior / facade",
+"sub": "properties/3bhk-rent-greater-noida-west-1.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/3bhk-rent-greater-noida-west-3",
+"w": 1200,
+"h": 900,
+"mood": "slate",
+"label": "PHOTO 3/4 \u2014 3 BHK for Rent in Ready Society \u2014 master bedroom",
+"sub": "properties/3bhk-rent-greater-noida-west-3.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/3bhk-rent-greater-noida-west-4",
+"w": 1200,
+"h": 900,
+"mood": "charcoal",
+"label": "PHOTO 4/4 \u2014 3 BHK for Rent in Ready Society \u2014 kitchen / balcony view",
+"sub": "properties/3bhk-rent-greater-noida-west-4.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "projects/verdant-heights",
+"w": 1200,
+"h": 750,
+"mood": "gold",
+"label": "PROJECT \u2014 replace: Verdant Heights elevation render",
+"sub": "projects/verdant-heights.jpg \u00b7 1200\u00d7750"
+},
+{
+"name": "projects/riverside-residences",
+"w": 1200,
+"h": 750,
+"mood": "slate",
+"label": "PROJECT \u2014 replace: Riverside Residences elevation render",
+"sub": "projects/riverside-residences.jpg \u00b7 1200\u00d7750"
+},
+{
+"name": "projects/oakwood-villas",
+"w": 1200,
+"h": 750,
+"mood": "bronze",
+"label": "PROJECT \u2014 replace: Oakwood Villas elevation render",
+"sub": "projects/oakwood-villas.jpg \u00b7 1200\u00d7750"
+},
+{
+"name": "projects/aurum-business-park",
+"w": 1200,
+"h": 750,
+"mood": "charcoal",
+"label": "PROJECT \u2014 replace: Aurum Business Park elevation render",
+"sub": "projects/aurum-business-park.jpg \u00b7 1200\u00d7750"
+},
+{
+"name": "projects/skyline-one",
+"w": 1200,
+"h": 750,
+"mood": "stone",
+"label": "PROJECT \u2014 replace: Skyline One elevation render",
+"sub": "projects/skyline-one.jpg \u00b7 1200\u00d7750"
+},
+{
+"name": "agents/agent-1",
+"w": 800,
+"h": 1000,
+"mood": "stone",
+"label": "PORTRAIT \u2014 replace: Founder &amp; Principal Consultant",
+"sub": "agents/agent-1.jpg \u00b7 800\u00d71000"
+},
+{
+"name": "agents/agent-2",
+"w": 800,
+"h": 1000,
+"mood": "slate",
+"label": "PORTRAIT \u2014 replace: Senior Consultant \u2014 Luxury Homes",
+"sub": "agents/agent-2.jpg \u00b7 800\u00d71000"
+},
+{
+"name": "agents/agent-3",
+"w": 800,
+"h": 1000,
+"mood": "charcoal",
+"label": "PORTRAIT \u2014 replace: Residential Consultant",
+"sub": "agents/agent-3.jpg \u00b7 800\u00d71000"
+},
+{
+"name": "agents/agent-4",
+"w": 800,
+"h": 1000,
+"mood": "bronze",
+"label": "PORTRAIT \u2014 replace: Villas &amp; Expressway Specialist",
+"sub": "agents/agent-4.jpg \u00b7 800\u00d71000"
+},
+{
+"name": "agents/agent-5",
+"w": 800,
+"h": 1000,
+"mood": "stone",
+"label": "PORTRAIT \u2014 replace: Plots &amp; NCR Investments",
+"sub": "agents/agent-5.jpg \u00b7 800\u00d71000"
+},
+{
+"name": "agents/agent-6",
+"w": 800,
+"h": 1000,
+"mood": "slate",
+"label": "PORTRAIT \u2014 replace: Head \u2014 Commercial Leasing",
+"sub": "agents/agent-6.jpg \u00b7 800\u00d71000"
+}
+]
+}

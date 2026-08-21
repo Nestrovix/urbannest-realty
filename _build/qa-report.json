@@ -1,0 +1,397 @@
+{
+ "pages": [
+  "index.html",
+  "about.html",
+  "agents.html",
+  "contact.html",
+  "privacy.html",
+  "projects.html",
+  "properties.html",
+  "property.html"
+ ],
+ "errors": [],
+ "broken": [],
+ "overflow": [],
+ "missingAssets": [],
+ "a11y": {
+  "index.html": {
+   "h1": 1,
+   "imgsNoAlt": 0,
+   "inputsNoLabel": 0,
+   "title": true,
+   "meta": true,
+   "og": true,
+   "lang": "en",
+   "buttonsNoName": 0
+  },
+  "about.html": {
+   "h1": 1,
+   "imgsNoAlt": 0,
+   "inputsNoLabel": 0,
+   "title": true,
+   "meta": true,
+   "og": true,
+   "lang": "en",
+   "buttonsNoName": 0
+  },
+  "agents.html": {
+   "h1": 1,
+   "imgsNoAlt": 0,
+   "inputsNoLabel": 0,
+   "title": true,
+   "meta": true,
+   "og": true,
+   "lang": "en",
+   "buttonsNoName": 0
+  },
+  "contact.html": {
+   "h1": 1,
+   "imgsNoAlt": 0,
+   "inputsNoLabel": 0,
+   "title": true,
+   "meta": true,
+   "og": true,
+   "lang": "en",
+   "buttonsNoName": 0
+  },
+  "privacy.html": {
+   "h1": 1,
+   "imgsNoAlt": 0,
+   "inputsNoLabel": 0,
+   "title": true,
+   "meta": true,
+   "og": true,
+   "lang": "en",
+   "buttonsNoName": 0
+  },
+  "projects.html": {
+   "h1": 1,
+   "imgsNoAlt": 0,
+   "inputsNoLabel": 0,
+   "title": true,
+   "meta": true,
+   "og": true,
+   "lang": "en",
+   "buttonsNoName": 0
+  },
+  "properties.html": {
+   "h1": 1,
+   "imgsNoAlt": 0,
+   "inputsNoLabel": 0,
+   "title": true,
+   "meta": true,
+   "og": true,
+   "lang": "en",
+   "buttonsNoName": 0
+  },
+  "property.html": {
+   "h1": 1,
+   "imgsNoAlt": 0,
+   "inputsNoLabel": 0,
+   "title": true,
+   "meta": true,
+   "og": true,
+   "lang": "en",
+   "buttonsNoName": 0
+  }
+ },
+ "tapTargets": {
+  "index.html": [],
+  "about.html": [],
+  "agents.html": [],
+  "contact.html": [],
+  "privacy.html": [],
+  "projects.html": [],
+  "properties.html": [],
+  "property.html": []
+ },
+ "checks": {
+  "index.html unbound data-href": 0,
+  "index.html header": {
+   "topClass": "site-header",
+   "scrolledClassApplied": true
+  },
+  "index.html mobileNav": {
+   "opens": true,
+   "escCloses": true
+  },
+  "about.html unbound data-href": 0,
+  "about.html header": {
+   "topClass": "site-header",
+   "scrolledClassApplied": true
+  },
+  "about.html mobileNav": {
+   "opens": true,
+   "escCloses": true
+  },
+  "agents.html unbound data-href": 0,
+  "agents.html header": {
+   "topClass": "site-header",
+   "scrolledClassApplied": true
+  },
+  "agents.html mobileNav": {
+   "opens": true,
+   "escCloses": true
+  },
+  "contact.html unbound data-href": 0,
+  "contact.html header": {
+   "topClass": "site-header",
+   "scrolledClassApplied": true
+  },
+  "contact.html mobileNav": {
+   "opens": true,
+   "escCloses": true
+  },
+  "privacy.html unbound data-href": 0,
+  "privacy.html header": {
+   "topClass": "site-header",
+   "scrolledClassApplied": true
+  },
+  "privacy.html mobileNav": {
+   "opens": true,
+   "escCloses": true
+  },
+  "projects.html unbound data-href": 0,
+  "projects.html header": {
+   "topClass": "site-header",
+   "scrolledClassApplied": true
+  },
+  "projects.html mobileNav": {
+   "opens": true,
+   "escCloses": true
+  },
+  "properties.html unbound data-href": 0,
+  "properties.html header": {
+   "topClass": "site-header",
+   "scrolledClassApplied": true
+  },
+  "properties.html mobileNav": {
+   "opens": true,
+   "escCloses": true
+  },
+  "property.html unbound data-href": 0,
+  "property.html header": {
+   "topClass": "site-header",
+   "scrolledClassApplied": true
+  },
+  "property.html mobileNav": {
+   "opens": true,
+   "escCloses": true
+  },
+  "data images exist": {
+   "properties": 22,
+   "missing": []
+  },
+  "home search → properties": {
+   "url": "properties.html?type=villa&beds=4",
+   "locationOptions": 10,
+   "buyPriceOpts": [
+    "No min",
+    "₹25 L",
+    "₹50 L"
+   ],
+   "rentPriceOpts": [
+    "No min",
+    "₹10,000/mo",
+    "₹20,000/mo"
+   ],
+   "results": 1,
+   "allVilla4Beds": true,
+   "formReflects": true,
+   "chips": [
+    "Villa",
+    "4 BHK"
+   ]
+  },
+  "listing filters/sort": {
+   "total": 15,
+   "countText0": "15 results",
+   "apartments": 7,
+   "countText1": "7 results",
+   "liveCountChanged": true,
+   "urlHasType": true,
+   "sortAsc": true,
+   "sortDesc": true,
+   "newestFirst": "smart-2bhk-greater-noida-west",
+   "rentOnly": true,
+   "rentCount": 4,
+   "rentPriceOpt": "₹10,000/mo",
+   "emptyState": true,
+   "resetRestores": true,
+   "keyword": [
+    "Skyline 3 BHK with Golf-Course Views",
+    "4 BHK on Golf Course Road"
+   ],
+   "priceRangeOk": true,
+   "directParams": [
+    "furnished-3bhk-rent-sector-137"
+   ],
+   "directChips": [
+    "Sector 137",
+    "Listed by [Agent name] (Founder & Principal Consultant)"
+   ]
+  },
+  "mobile filter sheet": {
+   "toggleVisible": true,
+   "sheetHiddenBefore": true,
+   "opens": true,
+   "sheetBox": {
+    "top": 175,
+    "bottom": 844,
+    "vh": 844
+   },
+   "applyText": "Show 2 properties",
+   "appliesAndCloses": true,
+   "mobileCols": 1,
+   "escCloses": true
+  },
+  "tablet listing cols": 2,
+  "property detail": {
+   "title": "Skyline 3 BHK with Golf-Course Views",
+   "h1s": 1,
+   "price": "₹1.85 Cr",
+   "docTitle": "Skyline 3 BHK with Golf-Course Views — ₹1.85 Cr · Sector 150, Noida | ",
+   "mainSrc": "assets/images/properties/skyline-3bhk-sector-150-1.svg",
+   "thumbs": 4,
+   "thumbSwitches": true,
+   "countTxt": "3 / 4",
+   "agent": "[Agent name]",
+   "agentWaHasContext": true,
+   "facts": 8,
+   "amenities": 8,
+   "mapHasLocality": true,
+   "fpHref": "assets/images/floor-plans/floor-plan-placeholder.svg",
+   "similar": [
+    "corner-4bhk-sector-137",
+    "garden-2bhk-sector-76",
+    "expressway-3bhk-study"
+   ],
+   "crumb": "Skyline 3 BHK with Golf-Course Views",
+   "prefillHasTitle": true,
+   "ld": [
+    "RealEstateListing"
+   ],
+   "lightbox": {
+    "opens": true,
+    "src0": "assets/images/properties/skyline-3bhk-sector-150-3.svg",
+    "arrowAdvances": true,
+    "caption": "4 / 4 · Skyline 3 BHK with Golf-Course Views",
+    "escCloses": true
+   },
+   "enquiry": {
+    "blockedInvalid": [
+     "e-name",
+     "e-phone",
+     "e-message"
+    ],
+    "statusErr": "Please fix the highlighted fields.",
+    "successHiddenBefore": true,
+    "phoneErr": "Enter a valid 10-digit Indian mobile number.",
+    "busyState": "true",
+    "success": true,
+    "formHidden": true,
+    "waAgainHasDetails": true
+   }
+  },
+  "property not found": {
+   "h1": "Property not found",
+   "h1Count": 1,
+   "suggestions": 3
+  },
+  "mobile detail sticky bar": {
+   "display": "grid",
+   "position": "fixed",
+   "bottom": 0,
+   "height": 68,
+   "buttons": 3,
+   "visible": true,
+   "btnSizes": [
+    48,
+    48,
+    48
+   ],
+   "thumbH": [
+    60,
+    60,
+    60,
+    60
+   ],
+   "whatsappFloatHiddenOnDetail": true,
+   "enquireAnchorExists": true,
+   "homeHasNoStickyBar": true
+  },
+  "home render": {
+   "featured": 6,
+   "projects": 3,
+   "agents": 3,
+   "cats": [
+    "11 listings",
+    "3 listings",
+    "3 listings",
+    "2 listings",
+    "3 listings"
+   ],
+   "sectionOrder": [
+    "hero",
+    "search",
+    "featured",
+    "projects",
+    "categories",
+    "why",
+    "agents",
+    "stats",
+    "testimonials",
+    "consultation",
+    "location"
+   ],
+   "statsAfterCountUp": [
+    "850+",
+    "12",
+    "98%",
+    "40+"
+   ],
+   "callbackBlocked": 3,
+   "callbackSuccess": true,
+   "unboundDataHref": 0,
+   "waFloat": "https://wa.me/91XXXXXXXXXX?text=Hi%20Urb",
+   "mapSrc": "https://maps.google.com/maps?q=Sector%2062%2C%20Noida%2C%20U"
+  },
+  "contact form": {
+   "topicPrefill": "Project brochure",
+   "refPrefill": true,
+   "blocked": [
+    "c-name",
+    "c-phone",
+    "c-message"
+   ],
+   "emailErr": true,
+   "success": true
+  },
+  "projects filter": {
+   "all": 6,
+   "ready": [
+    "Ready to move"
+   ],
+   "readyOnly": true
+  },
+  "agents page": {
+   "agents": 6,
+   "listingsLink": "properties.html?agent=a1"
+  },
+  "drawer nav": {
+   "open": true,
+   "expanded": "true",
+   "lock": true,
+   "links": 6,
+   "current": "About",
+   "escCloses": true
+  }
+ },
+ "summary": {
+  "clean": true,
+  "errors": 0,
+  "broken": 0,
+  "overflow": 0,
+  "missingAssets": 0
+ }
+}

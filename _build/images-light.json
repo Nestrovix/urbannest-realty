@@ -1,0 +1,210 @@
+{
+"out": "assets/images",
+"moods": {
+"ivory": [
+"#D9D3C7",
+"#A39D91",
+"#F6F5F2"
+],
+"pearl": [
+"#CFCBC4",
+"#8F8B84",
+"#EDEBE6"
+]
+},
+"labelColor": "#1C1C1E",
+"images": [
+{
+"name": "about-office",
+"w": 1200,
+"h": 900,
+"mood": "ivory",
+"label": "ABOUT \u2014 replace: office interior with the team",
+"sub": "about-office.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/skyline-3bhk-sector-150-3",
+"w": 1200,
+"h": 900,
+"mood": "ivory",
+"label": "PHOTO 3/4 \u2014 Skyline 3 BHK with Golf-Course Views \u2014 master bedroom",
+"sub": "properties/skyline-3bhk-sector-150-3.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/corner-4bhk-sector-137-2",
+"w": 1200,
+"h": 900,
+"mood": "ivory",
+"label": "PHOTO 2/4 \u2014 Corner 4 BHK Residence with Study \u2014 living room",
+"sub": "properties/corner-4bhk-sector-137-2.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/garden-2bhk-sector-76-1",
+"w": 1200,
+"h": 900,
+"mood": "ivory",
+"label": "PHOTO 1/4 \u2014 Garden-facing 2 BHK near Sector 76 Metro \u2014 exterior / facade",
+"sub": "properties/garden-2bhk-sector-76-1.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/expressway-3bhk-study-4",
+"w": 1200,
+"h": 900,
+"mood": "ivory",
+"label": "PHOTO 4/4 \u2014 Expressway-facing 3 BHK + Study \u2014 kitchen / balcony view",
+"sub": "properties/expressway-3bhk-study-4.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/pool-villa-sector-128-3",
+"w": 1200,
+"h": 900,
+"mood": "ivory",
+"label": "PHOTO 3/4 \u2014 Luxury Villa with Private Pool \u2014 master bedroom",
+"sub": "properties/pool-villa-sector-128-3.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/duplex-penthouse-sector-150-2",
+"w": 1200,
+"h": 900,
+"mood": "ivory",
+"label": "PHOTO 2/4 \u2014 Duplex Penthouse with Terrace Garden \u2014 living room",
+"sub": "properties/duplex-penthouse-sector-150-2.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/plot-sector-150-corner-1",
+"w": 1200,
+"h": 900,
+"mood": "pearl",
+"label": "PHOTO 1/4 \u2014 Corner Residential Plot, 300 sq yd \u2014 exterior / facade",
+"sub": "properties/plot-sector-150-corner-1.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/retail-shop-sector-62-4",
+"w": 1200,
+"h": 900,
+"mood": "pearl",
+"label": "PHOTO 4/4 \u2014 High-Street Retail Shop, Ground Floor \u2014 kitchen / balcony view",
+"sub": "properties/retail-shop-sector-62-4.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/office-it-park-sector-62-3",
+"w": 1200,
+"h": 900,
+"mood": "pearl",
+"label": "PHOTO 3/4 \u2014 Furnished Office Space in IT Park \u2014 master bedroom",
+"sub": "properties/office-it-park-sector-62-3.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/smart-2bhk-greater-noida-west-2",
+"w": 1200,
+"h": 900,
+"mood": "ivory",
+"label": "PHOTO 2/4 \u2014 Smart 2 BHK near Upcoming Metro \u2014 living room",
+"sub": "properties/smart-2bhk-greater-noida-west-2.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/premium-3bhk-greater-noida-west-1",
+"w": 1200,
+"h": 900,
+"mood": "ivory",
+"label": "PHOTO 1/4 \u2014 Premium 3 BHK in New Tower \u2014 exterior / facade",
+"sub": "properties/premium-3bhk-greater-noida-west-1.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/independent-villa-sector-128-4",
+"w": 1200,
+"h": 900,
+"mood": "ivory",
+"label": "PHOTO 4/4 \u2014 Independent Villa on the Expressway \u2014 kitchen / balcony view",
+"sub": "properties/independent-villa-sector-128-4.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/sky-deck-penthouse-sector-137-3",
+"w": 1200,
+"h": 900,
+"mood": "ivory",
+"label": "PHOTO 3/4 \u2014 Penthouse with Sky Deck \u2014 master bedroom",
+"sub": "properties/sky-deck-penthouse-sector-137-3.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/4bhk-golf-course-road-gurgaon-2",
+"w": 1200,
+"h": 900,
+"mood": "ivory",
+"label": "PHOTO 2/4 \u2014 4 BHK on Golf Course Road \u2014 living room",
+"sub": "properties/4bhk-golf-course-road-gurgaon-2.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/township-plot-ghaziabad-1",
+"w": 1200,
+"h": 900,
+"mood": "pearl",
+"label": "PHOTO 1/4 \u2014 Plot in Gated Township, 200 sq yd \u2014 exterior / facade",
+"sub": "properties/township-plot-ghaziabad-1.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/furnished-3bhk-rent-sector-137-4",
+"w": 1200,
+"h": 900,
+"mood": "ivory",
+"label": "PHOTO 4/4 \u2014 Fully Furnished 3 BHK for Rent \u2014 kitchen / balcony view",
+"sub": "properties/furnished-3bhk-rent-sector-137-4.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/2bhk-rent-sector-76-3",
+"w": 1200,
+"h": 900,
+"mood": "ivory",
+"label": "PHOTO 3/4 \u2014 2 BHK for Rent near Metro \u2014 master bedroom",
+"sub": "properties/2bhk-rent-sector-76-3.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/villa-rent-sector-128-2",
+"w": 1200,
+"h": 900,
+"mood": "ivory",
+"label": "PHOTO 2/4 \u2014 Furnished Villa for Rent \u2014 living room",
+"sub": "properties/villa-rent-sector-128-2.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/office-floor-lease-sector-62-1",
+"w": 1200,
+"h": 900,
+"mood": "pearl",
+"label": "PHOTO 1/4 \u2014 Fitted Office Floor for Lease \u2014 exterior / facade",
+"sub": "properties/office-floor-lease-sector-62-1.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/studio-rent-noida-expressway-4",
+"w": 1200,
+"h": 900,
+"mood": "ivory",
+"label": "PHOTO 4/4 \u2014 1 BHK Studio for Rent \u2014 kitchen / balcony view",
+"sub": "properties/studio-rent-noida-expressway-4.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/penthouse-rent-sector-150-3",
+"w": 1200,
+"h": 900,
+"mood": "ivory",
+"label": "PHOTO 3/4 \u2014 Penthouse for Rent with Terrace \u2014 master bedroom",
+"sub": "properties/penthouse-rent-sector-150-3.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "properties/3bhk-rent-greater-noida-west-2",
+"w": 1200,
+"h": 900,
+"mood": "ivory",
+"label": "PHOTO 2/4 \u2014 3 BHK for Rent in Ready Society \u2014 living room",
+"sub": "properties/3bhk-rent-greater-noida-west-2.jpg \u00b7 1200\u00d7900"
+},
+{
+"name": "projects/metro-greens",
+"w": 1200,
+"h": 750,
+"mood": "ivory",
+"label": "PROJECT \u2014 replace: Metro Greens \u2014 Phase 3 elevation render",
+"sub": "projects/metro-greens.jpg \u00b7 1200\u00d7750"
+}
+]
+}

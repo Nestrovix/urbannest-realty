@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://urbannest.vercel.app/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://urbannest.vercel.app/properties</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://urbannest.vercel.app/projects</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://urbannest.vercel.app/about</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://urbannest.vercel.app/agents</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://urbannest.vercel.app/contact</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://urbannest.vercel.app/property?id=skyline-3bhk-sector-150</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://urbannest.vercel.app/property?id=corner-4bhk-sector-137</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://urbannest.vercel.app/property?id=garden-2bhk-sector-76</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://urbannest.vercel.app/property?id=expressway-3bhk-study</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://urbannest.vercel.app/property?id=pool-villa-sector-128</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://urbannest.vercel.app/property?id=duplex-penthouse-sector-150</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://urbannest.vercel.app/property?id=plot-sector-150-corner</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://urbannest.vercel.app/property?id=retail-shop-sector-62</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://urbannest.vercel.app/property?id=office-it-park-sector-62</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://urbannest.vercel.app/property?id=smart-2bhk-greater-noida-west</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://urbannest.vercel.app/property?id=premium-3bhk-greater-noida-west</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://urbannest.vercel.app/property?id=independent-villa-sector-128</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://urbannest.vercel.app/property?id=sky-deck-penthouse-sector-137</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://urbannest.vercel.app/property?id=4bhk-golf-course-road-gurgaon</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://urbannest.vercel.app/property?id=township-plot-ghaziabad</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://urbannest.vercel.app/property?id=furnished-3bhk-rent-sector-137</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://urbannest.vercel.app/property?id=2bhk-rent-sector-76</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://urbannest.vercel.app/property?id=villa-rent-sector-128</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://urbannest.vercel.app/property?id=office-floor-lease-sector-62</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://urbannest.vercel.app/property?id=studio-rent-noida-expressway</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://urbannest.vercel.app/property?id=penthouse-rent-sector-150</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://urbannest.vercel.app/property?id=3bhk-rent-greater-noida-west</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+</urlset>

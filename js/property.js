@@ -34,7 +34,7 @@
 
   /* --- header block --- */
   $("[data-p-crumb]").textContent = p.title;
-  $("[data-p-tags]").innerHTML = `${p.featured ? `<span class="tag tag--gold">Featured</span>` : ""}<span class="tag tag--dark">${p.purpose === "rent" ? "For Rent" : "For Sale"}</span><span class="tag tag--outline">${typeLabel}</span>`;
+  $("[data-p-tags]").innerHTML = `${p.featured ? `<span class="tag tag--key">Featured</span>` : ""}<span class="tag tag--dark">${p.purpose === "rent" ? "For Rent" : "For Sale"}</span><span class="tag tag--outline">${typeLabel}</span>`;
   $("[data-p-title]").textContent = p.title;
   $("[data-p-loc]").innerHTML = `<svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg>${esc(p.locality)}`;
   $("[data-p-price]").textContent = price;
@@ -45,16 +45,16 @@
   $$("[data-p-tel]").forEach((a) => (a.href = `tel:${agent.phoneTel}`));
 
   /* --- gallery --- */
-  const items = p.images.map((src, i) => ({ src, alt: `${p.title} — photo ${i + 1} of ${p.images.length}`, caption: p.title }));
+  const items = p.images.map((src, i) => ({ src, alt: (p.imageAlts && p.imageAlts[i]) || `${p.title} — photo ${i + 1} of ${p.images.length}`, caption: p.title }));
   const mainImg = $("[data-gallery-main]"), thumbs = $("[data-gallery-thumbs]"), countEl = $("[data-gallery-count]");
   let cur = 0;
   const setMain = (i) => {
     cur = (i + items.length) % items.length;
-    mainImg.innerHTML = `<img src="${items[cur].src}" alt="${esc(items[cur].alt)}" width="1200" height="900" ${cur === 0 ? 'fetchpriority="high"' : ""}>`;
+    mainImg.innerHTML = `<img src="${items[cur].src}" alt="${esc(items[cur].alt)}" width="1000" height="625" ${cur === 0 ? 'fetchpriority="high"' : ""}>`;
     countEl.innerHTML = `<svg class="ic" aria-hidden="true"><use href="#i-image"/></svg>${cur + 1} / ${items.length}`;
     $$("button", thumbs).forEach((b, j) => b.setAttribute("aria-current", String(j === cur)));
   };
-  thumbs.innerHTML = items.map((it, i) => `<button type="button" aria-label="Show photo ${i + 1}" aria-current="${i === 0}"><img src="${it.src}" alt="" loading="lazy" width="400" height="300"></button>`).join("");
+  thumbs.innerHTML = items.map((it, i) => `<button type="button" aria-label="Show photo ${i + 1}: ${esc(it.alt)}" aria-current="${i === 0}"><img src="${it.src}" alt="" loading="lazy" width="400" height="250"></button>`).join("");
   thumbs.addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) setMain($$("button", thumbs).indexOf(b)); });
   mainImg.addEventListener("click", () => UN.lightbox && UN.lightbox.open(items, cur));
   // swipe on main image (mobile)
@@ -79,12 +79,12 @@
   /* --- overview / amenities / floor plan --- */
   $("[data-p-desc]").innerHTML = `<p>${esc(p.description)}</p><p>Listing ID: <b>${esc(p.id)}</b> · Listed on ${new Date(p.listed + "T00:00").toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" })}. Prices are indicative and exclusive of registration, stamp duty and applicable taxes; final terms on confirmation with the owner/developer.</p>`;
   $("[data-p-amenities]").innerHTML = p.amenities.map((a) => `<li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>${esc(a)}</li>`).join("");
-  const fpImg = $("[data-p-floorplan]"); fpImg.src = p.floorPlan; fpImg.alt = `Floor plan — ${p.title} (placeholder — replace with the real plan)`;
+  const fpImg = $("[data-p-floorplan]"); fpImg.src = p.floorPlan; fpImg.alt = `Indicative floor plan — ${p.title}: living and dining, kitchen, balcony, bedrooms and bathrooms`;
   const fpLink = $("[data-p-floorplan-link]"); fpLink.href = p.floorPlanPdf || p.floorPlan; if (!p.floorPlanPdf) { fpLink.setAttribute("download", `${p.id}-floor-plan`); } else fpLink.removeAttribute("download");
 
   /* --- agent card --- */
   $("[data-p-agent]").innerHTML = `
-    <img src="${agent.photo}" alt="Portrait — ${esc(agent.name)}" width="72" height="72" loading="lazy">
+    <img src="${agent.photo}" alt="${esc(agent.photoAlt || `Portrait — ${agent.name}`)}" width="72" height="72" loading="lazy">
     <div><span class="agent-card__label">Listed by</span><h3>${esc(agent.name)}</h3><p>${esc(agent.role)}<br>Speaks ${agent.languages.join(", ")}</p></div>
     <div class="agent-card__actions"><a class="btn btn--outline-dark btn--sm" href="tel:${agent.phoneTel}"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg> ${esc(agent.phoneDisplay)}</a><a class="btn btn--whatsapp btn--sm" href="${waLink}" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-whatsapp"/></svg> WhatsApp</a></div>`;
 

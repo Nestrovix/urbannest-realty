@@ -10,10 +10,10 @@
 <meta property="og:title" content="Property details — UrbanNest Realty, Noida"><meta property="og:description" content="Photos, price, floor plan, amenities, location map and agent contact for this UrbanNest Realty listing in Noida.">
 <meta property="og:image" content="https://urbannest.vercel.app/assets/og-image.png"><meta property="og:url" content="https://urbannest.vercel.app/property.html">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#1C1C1E">
+<meta name="theme-color" content="#17181B">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="assets/fonts/dm-serif-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/source-serif-4-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/style.css">
 <script>document.documentElement.classList.add("js")</script>
 
@@ -62,7 +62,7 @@
 </defs></svg>
 <header class="site-header" id="top">
   <div class="container--wide">
-    <a class="brand" href="index.html" aria-label="UrbanNest Realty — home"><svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1C1C1E"/><path d="M14 31 32 15l18 16" fill="none" stroke="#B8924A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 29v19h24V29" fill="none" stroke="#B8924A" stroke-width="3.5" stroke-linejoin="round"/><rect x="28" y="37" width="8" height="11" rx="1" fill="#D3B274"/></svg><span>UrbanNest<small>Realty · Noida</small></span></a>
+    <a class="brand" href="index.html" aria-label="UrbanNest Realty — home"><svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" fill="#17181B"/><rect x="13" y="15" width="38" height="7" fill="#2F5BEA"/><rect x="13" y="28" width="26" height="7" fill="#F4F5F7"/><rect x="13" y="41" width="32" height="7" fill="#F4F5F7" opacity=".45"/></svg><span>UrbanNest<small>Realty · Noida</small></span></a>
     <nav class="nav" aria-label="Primary">
       <ul class="nav__links"><li><a href="index.html">Home</a></li><li><a href="properties.html">Properties</a></li><li><a href="projects.html">Projects</a></li><li><a href="about.html">About</a></li><li><a href="agents.html">Agents</a></li><li><a href="contact.html">Contact</a></li></ul>
       <div class="nav__cta">
@@ -100,7 +100,7 @@
       <section class="facts" id="details" aria-label="Key facts" data-p-facts></section>
       <section class="prop-section" id="overview"><h2>Overview</h2><div data-p-desc></div></section>
       <section class="prop-section" id="amenities"><h2>Amenities</h2><ul class="amenities" data-p-amenities></ul></section>
-      <section class="prop-section" id="floor-plan"><h2>Floor plan</h2><figure class="floor-plan"><img data-p-floorplan src="assets/images/floor-plans/floor-plan-placeholder.svg" alt="Floor plan" loading="lazy" width="1600" height="1200"><figcaption class="floor-plan__bar"><span>Indicative layout — dimensions to be confirmed on site.</span><a class="btn btn--outline-dark btn--sm" data-p-floorplan-link href="assets/images/floor-plans/floor-plan-placeholder.svg" download><svg class="ic"><use href="#i-download"/></svg> Download floor plan</a></figcaption></figure></section>
+      <section class="prop-section" id="floor-plan"><h2>Floor plan</h2><figure class="floor-plan"><img data-p-floorplan src="assets/images/floor-plans/floor-plan-placeholder.svg" alt="Indicative floor plan: living and dining, kitchen, balcony, three bedrooms and two bathrooms" loading="lazy" width="1600" height="1200"><figcaption class="floor-plan__bar"><span>Indicative layout — dimensions to be confirmed on site.</span><a class="btn btn--outline-dark btn--sm" data-p-floorplan-link href="assets/images/floor-plans/floor-plan-placeholder.svg" download><svg class="ic"><use href="#i-download"/></svg> Download floor plan</a></figcaption></figure></section>
     </div>
     <aside class="prop-side">
       <div class="agent-card" data-p-agent></div>
@@ -131,7 +131,7 @@
   <section class="section section--off" id="similar">
     <div class="container">
       <div class="section-head split reveal"><div><span class="eyebrow">You may also like</span><h2>Similar properties</h2></div><a class="link-arrow" href="properties.html">Browse all <svg class="ic"><use href="#i-arrow"/></svg></a></div>
-      <div class="prop-grid" data-p-similar></div>
+      <div class="pindex"><div class="pindex__head"><span>№</span><span>Property</span><span>Locality</span><span>Configuration</span><span>Area</span><span>Price</span><span></span></div><div class="pindex__rows" data-p-similar></div></div>
     </div>
   </section>
 </div>
@@ -140,7 +140,7 @@
   <h1>Property not found</h1>
   <p class="lead">This listing may have been sold, rented or removed. Browse our current properties or ask a consultant for similar options.</p>
   <div class="hero__actions"><a class="btn btn--dark" href="properties.html">Browse properties</a><a class="btn btn--outline-dark" href="contact.html#consult">Ask a consultant</a></div>
-  <div class="prop-grid mt-6" data-nf-suggest></div>
+  <div class="pindex mt-6"><div class="pindex__head"><span>№</span><span>Property</span><span>Locality</span><span>Configuration</span><span>Area</span><span>Price</span><span></span></div><div class="pindex__rows" data-nf-suggest></div></div>
 </div>
 </main>
 <div class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer"><button class="lightbox__btn lightbox__close" aria-label="Close"><svg class="ic"><use href="#i-x"/></svg></button><button class="lightbox__btn lightbox__prev" aria-label="Previous image"><svg class="ic"><use href="#i-left"/></svg></button><img src="" alt=""><button class="lightbox__btn lightbox__next" aria-label="Next image"><svg class="ic"><use href="#i-right"/></svg></button><div class="lightbox__caption"></div></div>
@@ -150,7 +150,7 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <a class="brand" href="index.html"><svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1C1C1E"/><path d="M14 31 32 15l18 16" fill="none" stroke="#B8924A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 29v19h24V29" fill="none" stroke="#B8924A" stroke-width="3.5" stroke-linejoin="round"/><rect x="28" y="37" width="8" height="11" rx="1" fill="#D3B274"/></svg><span>UrbanNest<small>Realty · Noida</small></span></a>
+        <a class="brand" href="index.html"><svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" fill="#17181B"/><rect x="13" y="15" width="38" height="7" fill="#2F5BEA"/><rect x="13" y="28" width="26" height="7" fill="#F4F5F7"/><rect x="13" y="41" width="32" height="7" fill="#F4F5F7" opacity=".45"/></svg><span>UrbanNest<small>Realty · Noida</small></span></a>
         <p>Premium residential and commercial real estate advisory in Noida, Greater Noida and the wider NCR — verified listings, honest pricing and end-to-end support.</p>
         <div class="socials mt-3">
           <a data-href="instagram" href="#" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ic"><use href="#i-instagram"/></svg></a>

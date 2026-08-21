@@ -109,32 +109,28 @@
   /* ---------- Card renderers (shared) ---------- */
   UN.propCard = (p, cls = "") => {
     const url = `property.html?id=${encodeURIComponent(p.id)}`;
-    const alt = `${p.title} — ${p.locality}`;
+    const alt = (p.imageAlts && p.imageAlts[0]) || `${p.title} — ${p.locality}`;
+    const cfg = p.beds ? `${p.beds} BHK${p.baths ? ` · ${p.baths} Bath` : ""}` : UN.typeLabel(p.type);
     return `
-    <article class="prop-card reveal in ${cls}" data-id="${esc(p.id)}" data-price="${p.price}" data-type="${p.type}" data-purpose="${p.purpose}" data-beds="${p.beds}">
-      <a class="prop-card__media" href="${url}" aria-label="${esc(p.title)} — view details">
-        <img src="${p.images[0]}" alt="${esc(alt)}" loading="lazy" width="1200" height="900">
-        <span class="prop-card__tags">${p.featured ? `<span class="tag tag--gold">Featured</span>` : ""}<span class="tag tag--light">${p.purpose === "rent" ? "For Rent" : "For Sale"}</span></span>
-        <span class="prop-card__price tnum">${UN.fmtPrice(p.price, p.purpose)}</span>
-      </a>
-      <div class="prop-card__body">
-        <p class="prop-card__loc"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg>${esc(p.locality)}</p>
+    <article class="prow reveal in ${cls}" data-id="${esc(p.id)}" data-price="${p.price}" data-type="${p.type}" data-purpose="${p.purpose}" data-beds="${p.beds}">
+      <span class="prow__n tnum" aria-hidden="true"></span>
+      <div class="prow__name">
         <h3><a href="${url}">${esc(p.title)}</a></h3>
-        <ul class="prop-meta" aria-label="Key facts">
-          ${p.beds ? `<li><svg class="ic" aria-hidden="true"><use href="#i-bed"/></svg>${p.beds} Bed${p.beds > 1 ? "s" : ""}</li>` : ""}
-          ${p.baths ? `<li><svg class="ic" aria-hidden="true"><use href="#i-bath"/></svg>${p.baths} Bath${p.baths > 1 ? "s" : ""}</li>` : ""}
-          <li><svg class="ic" aria-hidden="true"><use href="#i-area"/></svg>${p.area.toLocaleString("en-IN")} sq ft</li>
-        </ul>
-        <div class="prop-card__foot"><span class="prop-card__type">${UN.typeLabel(p.type)} · ${esc(p.possession)}</span><a class="link-arrow" href="${url}">View details <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+        <p class="prow__flags">${p.featured ? `<span class="is-key">Featured</span>` : ""}<span>${p.purpose === "rent" ? "For rent" : "For sale"}</span><span>${UN.typeLabel(p.type)}</span><span>${esc(p.possession)}</span></p>
       </div>
+      <p class="prow__loc">${esc(p.locality)}</p>
+      <p class="prow__cfg">${esc(cfg)}</p>
+      <p class="prow__area tnum">${p.area.toLocaleString("en-IN")}<u>sq ft</u></p>
+      <p class="prow__price tnum">${UN.fmtPrice(p.price, p.purpose)}</p>
+      <span class="prow__thumb"><img src="${p.images[0]}" alt="${esc(alt)}" loading="lazy" width="1000" height="625"></span>
     </article>`;
   };
   UN.projectCard = (pr, cls = "") => {
-    const statusCls = pr.status === "Ready to move" ? "tag--success" : pr.status === "New launch" ? "tag--gold" : "tag--light";
+    const statusCls = pr.status === "Ready to move" ? "tag--success" : pr.status === "New launch" ? "tag--key" : "tag--light";
     const wa = UN.waUrl(`Hi ${S.name}! I'm interested in ${pr.name} (${pr.locality}). Please share the brochure and price list.`);
     return `
     <article class="project reveal in ${cls}" data-status="${esc(pr.status)}">
-      <div class="project__media"><img src="${pr.image}" alt="${esc(pr.name)} — ${esc(pr.locality)}" loading="lazy" width="1200" height="750"><span class="tag ${statusCls}">${esc(pr.status)}</span><span class="project__rera">RERA: ${esc(pr.rera)}</span></div>
+      <div class="project__media"><img src="${pr.image}" alt="${esc(pr.imageAlt || `${pr.name} — ${pr.locality}`)}" loading="lazy" width="1000" height="563"><span class="tag ${statusCls}">${esc(pr.status)}</span><span class="project__rera">RERA: ${esc(pr.rera)}</span></div>
       <div class="project__body">
         <h3>${esc(pr.name)}</h3>
         <p class="project__dev">by ${esc(pr.developer)}</p>
@@ -147,7 +143,7 @@
   };
   UN.agentCard = (a, cls = "") => `
     <article class="agent reveal in ${cls}" data-id="${a.id}">
-      <div class="frame"><img src="${a.photo}" alt="Portrait — ${esc(a.name)}, ${esc(a.role)}" loading="lazy" width="800" height="1000"></div>
+      <div class="frame"><img src="${a.photo}" alt="${esc(a.photoAlt || `Portrait — ${a.name}, ${a.role}`)}" loading="lazy" width="600" height="750"></div>
       <div class="agent__body">
         <span class="agent__role">${esc(a.role)}</span>
         <h3>${esc(a.name)}</h3>

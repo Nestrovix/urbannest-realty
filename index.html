@@ -10,10 +10,10 @@
 <meta property="og:title" content="UrbanNest Realty — Premium Real Estate in Noida | Apartments, Villas, Penthouses, Plots & Commercial"><meta property="og:description" content="UrbanNest Realty is a premium real estate company in Noida. Search verified apartments, villas, penthouses, plots and commercial spaces across Sector 150, 137, 128, 76, 62, the Expressway and Greater Noida West. Book a free consultation.">
 <meta property="og:image" content="https://urbannest.vercel.app/assets/og-image.png"><meta property="og:url" content="https://urbannest.vercel.app/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#1C1C1E">
+<meta name="theme-color" content="#17181B">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="assets/fonts/dm-serif-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/source-serif-4-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/style.css">
 <script>document.documentElement.classList.add("js")</script>
 <script type="application/ld+json">
@@ -64,7 +64,7 @@
 </defs></svg>
 <header class="site-header" id="top">
   <div class="container--wide">
-    <a class="brand" href="index.html" aria-label="UrbanNest Realty — home"><svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1C1C1E"/><path d="M14 31 32 15l18 16" fill="none" stroke="#B8924A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 29v19h24V29" fill="none" stroke="#B8924A" stroke-width="3.5" stroke-linejoin="round"/><rect x="28" y="37" width="8" height="11" rx="1" fill="#D3B274"/></svg><span>UrbanNest<small>Realty · Noida</small></span></a>
+    <a class="brand" href="index.html" aria-label="UrbanNest Realty — home"><svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" fill="#17181B"/><rect x="13" y="15" width="38" height="7" fill="#2F5BEA"/><rect x="13" y="28" width="26" height="7" fill="#F4F5F7"/><rect x="13" y="41" width="32" height="7" fill="#F4F5F7" opacity=".45"/></svg><span>UrbanNest<small>Realty · Noida</small></span></a>
     <nav class="nav" aria-label="Primary">
       <ul class="nav__links"><li><a href="index.html">Home</a></li><li><a href="properties.html">Properties</a></li><li><a href="projects.html">Projects</a></li><li><a href="about.html">About</a></li><li><a href="agents.html">Agents</a></li><li><a href="contact.html">Contact</a></li></ul>
       <div class="nav__cta">
@@ -87,16 +87,15 @@
 <main id="main">
 <!-- 1. HERO (with the property search bar floating under it — section 2) -->
 <section class="hero" aria-label="Welcome">
-  <div class="hero__media"><img src="assets/images/hero-home.svg" alt="Premium residential towers in Noida at dusk" width="1920" height="1080" fetchpriority="high"></div>
-  <div class="hero__overlay"></div>
   <div class="container hero__content">
     <span class="eyebrow reveal">Premium real estate · Noida &amp; NCR</span>
     <h1 class="reveal d1">Find a home that feels <em>made for you.</em></h1>
     <p class="lead reveal d2">Curated apartments, villas, penthouses, plots and commercial spaces across Noida's finest sectors — with honest advice from consultants who know every tower by name.</p>
     <div class="hero__actions reveal d3">
       <a class="btn btn--primary btn--lg" href="properties.html">Browse Properties</a>
-      <a class="btn btn--outline-light btn--lg" href="contact.html#consult">Book a Consultation</a>
+      <a class="btn btn--outline-dark btn--lg" href="contact.html#consult">Book a Consultation</a>
     </div>
+    <div class="hero__media reveal d2"><img src="assets/images/hero-home.jpg" alt="Two modern high-rise apartment towers with pale facades rising against a blue sky scattered with white cloud" width="1600" height="900" fetchpriority="high"></div>
     <div class="hero__meta reveal d3">
       <div><b>Sector 150 · 137 · 128 · 76 · 62</b>Noida &amp; Expressway</div>
       <div><b>Buy · Rent · Invest</b>Residential &amp; commercial</div>
@@ -134,7 +133,10 @@
       <div><span class="eyebrow">Featured properties</span><h2>Hand-picked homes &amp; spaces</h2><p>A selection of our most sought-after listings this month — each one visited and verified by our team.</p></div>
       <a class="link-arrow" href="properties.html">View all properties <svg class="ic"><use href="#i-arrow"/></svg></a>
     </div>
-    <div class="prop-grid" data-featured></div>
+    <div class="pindex reveal">
+      <div class="pindex__head"><span>№</span><span>Property</span><span>Locality</span><span>Configuration</span><span>Area</span><span>Price</span><span></span></div>
+      <div class="pindex__rows" data-featured></div>
+    </div>
   </div>
 </section>
 
@@ -154,11 +156,11 @@
   <div class="container">
     <div class="section-head center reveal"><span class="eyebrow">Browse by category</span><h2>What are you looking for?</h2></div>
     <div class="cat-grid">
-      <a class="cat reveal" href="properties.html?type=apartment"><img src="assets/images/categories/apartments.svg" alt="" loading="lazy" width="900" height="1100"><div class="cat__body"><h3>Apartments</h3><span><b data-cat-count="apartment">—</b> <svg class="ic"><use href="#i-arrow"/></svg></span></div></a>
-      <a class="cat reveal d1" href="properties.html?type=villa"><img src="assets/images/categories/villas.svg" alt="" loading="lazy" width="900" height="1100"><div class="cat__body"><h3>Villas</h3><span><b data-cat-count="villa">—</b> <svg class="ic"><use href="#i-arrow"/></svg></span></div></a>
-      <a class="cat reveal d2" href="properties.html?type=penthouse"><img src="assets/images/categories/penthouses.svg" alt="" loading="lazy" width="900" height="1100"><div class="cat__body"><h3>Penthouses</h3><span><b data-cat-count="penthouse">—</b> <svg class="ic"><use href="#i-arrow"/></svg></span></div></a>
-      <a class="cat reveal d3" href="properties.html?type=plot"><img src="assets/images/categories/plots.svg" alt="" loading="lazy" width="900" height="1100"><div class="cat__body"><h3>Plots</h3><span><b data-cat-count="plot">—</b> <svg class="ic"><use href="#i-arrow"/></svg></span></div></a>
-      <a class="cat reveal d3" href="properties.html?type=commercial"><img src="assets/images/categories/commercial.svg" alt="" loading="lazy" width="900" height="1100"><div class="cat__body"><h3>Commercial</h3><span><b data-cat-count="commercial">—</b> <svg class="ic"><use href="#i-arrow"/></svg></span></div></a>
+      <a class="cat reveal" href="properties.html?type=apartment"><img src="assets/images/categories/apartments.jpg" alt="A cluster of tall apartment towers in the foreground of a city skyline" loading="lazy" width="600" height="375"><div class="cat__body"><h3>Apartments</h3><span><b data-cat-count="apartment">—</b> <svg class="ic"><use href="#i-arrow"/></svg></span></div></a>
+      <a class="cat reveal d1" href="properties.html?type=villa"><img src="assets/images/categories/villas.jpg" alt="A white flat-roofed villa with a rectangular swimming pool and an outdoor lounge area" loading="lazy" width="600" height="375"><div class="cat__body"><h3>Villas</h3><span><b data-cat-count="villa">—</b> <svg class="ic"><use href="#i-arrow"/></svg></span></div></a>
+      <a class="cat reveal d2" href="properties.html?type=penthouse"><img src="assets/images/categories/penthouses.jpg" alt="A sunlit city skyline seen from a high roof terrace" loading="lazy" width="600" height="375"><div class="cat__body"><h3>Penthouses</h3><span><b data-cat-count="penthouse">—</b> <svg class="ic"><use href="#i-arrow"/></svg></span></div></a>
+      <a class="cat reveal d3" href="properties.html?type=plot"><img src="assets/images/categories/plots.jpg" alt="An aerial view of surveyed housing lots divided by new roads" loading="lazy" width="600" height="375"><div class="cat__body"><h3>Plots</h3><span><b data-cat-count="plot">—</b> <svg class="ic"><use href="#i-arrow"/></svg></span></div></a>
+      <a class="cat reveal d3" href="properties.html?type=commercial"><img src="assets/images/categories/commercial.jpg" alt="Two teal-and-white glass office towers seen from street level" loading="lazy" width="600" height="375"><div class="cat__body"><h3>Commercial</h3><span><b data-cat-count="commercial">—</b> <svg class="ic"><use href="#i-arrow"/></svg></span></div></a>
     </div>
   </div>
 </section>
@@ -217,7 +219,7 @@
 
 <!-- 10. CONSULTATION CTA -->
 <section class="cta-band" id="consultation">
-  <img src="assets/images/cta-consult.svg" alt="" loading="lazy" width="1920" height="800">
+  <img src="assets/images/cta-consult.jpg" alt="A dense city skyline seen across open water in clear daylight" loading="lazy" width="1600" height="667">
   <div class="container">
     <div class="cta-layout">
       <div class="reveal">
@@ -270,7 +272,7 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <a class="brand" href="index.html"><svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1C1C1E"/><path d="M14 31 32 15l18 16" fill="none" stroke="#B8924A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 29v19h24V29" fill="none" stroke="#B8924A" stroke-width="3.5" stroke-linejoin="round"/><rect x="28" y="37" width="8" height="11" rx="1" fill="#D3B274"/></svg><span>UrbanNest<small>Realty · Noida</small></span></a>
+        <a class="brand" href="index.html"><svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" fill="#17181B"/><rect x="13" y="15" width="38" height="7" fill="#2F5BEA"/><rect x="13" y="28" width="26" height="7" fill="#F4F5F7"/><rect x="13" y="41" width="32" height="7" fill="#F4F5F7" opacity=".45"/></svg><span>UrbanNest<small>Realty · Noida</small></span></a>
         <p>Premium residential and commercial real estate advisory in Noida, Greater Noida and the wider NCR — verified listings, honest pricing and end-to-end support.</p>
         <div class="socials mt-3">
           <a data-href="instagram" href="#" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ic"><use href="#i-instagram"/></svg></a>

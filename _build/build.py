@@ -23,7 +23,7 @@ home = head("UrbanNest Realty — Premium Real Estate in Noida | Apartments, Vil
 <main id="main">
 <!-- 1. HERO (with the property search bar floating under it — section 2) -->
 <section class="hero" aria-label="Welcome">
-  <div class="hero__media"><img src="assets/images/hero-home.svg" alt="Premium residential towers in Noida at dusk" width="1920" height="1080" fetchpriority="high"></div>
+  <div class="hero__media"><img src="assets/images/hero-home.jpg" alt="Two modern high-rise apartment towers with pale facades rising against a blue sky scattered with white cloud" width="1600" height="900" fetchpriority="high"></div>
   <div class="hero__overlay"></div>
   <div class="container hero__content">
     <span class="eyebrow reveal">Premium real estate · Noida &amp; NCR</span>
@@ -84,11 +84,11 @@ home = head("UrbanNest Realty — Premium Real Estate in Noida | Apartments, Vil
   <div class="container">
     <div class="section-head center reveal"><span class="eyebrow">Browse by category</span><h2>What are you looking for?</h2></div>
     <div class="cat-grid">
-      <a class="cat reveal" href="properties.html?type=apartment"><img src="assets/images/categories/apartments.svg" alt="" loading="lazy" width="900" height="1100"><div class="cat__body"><h3>Apartments</h3><span><b data-cat-count="apartment">—</b> <svg class="ic"><use href="#i-arrow"/></svg></span></div></a>
-      <a class="cat reveal d1" href="properties.html?type=villa"><img src="assets/images/categories/villas.svg" alt="" loading="lazy" width="900" height="1100"><div class="cat__body"><h3>Villas</h3><span><b data-cat-count="villa">—</b> <svg class="ic"><use href="#i-arrow"/></svg></span></div></a>
-      <a class="cat reveal d2" href="properties.html?type=penthouse"><img src="assets/images/categories/penthouses.svg" alt="" loading="lazy" width="900" height="1100"><div class="cat__body"><h3>Penthouses</h3><span><b data-cat-count="penthouse">—</b> <svg class="ic"><use href="#i-arrow"/></svg></span></div></a>
-      <a class="cat reveal d3" href="properties.html?type=plot"><img src="assets/images/categories/plots.svg" alt="" loading="lazy" width="900" height="1100"><div class="cat__body"><h3>Plots</h3><span><b data-cat-count="plot">—</b> <svg class="ic"><use href="#i-arrow"/></svg></span></div></a>
-      <a class="cat reveal d3" href="properties.html?type=commercial"><img src="assets/images/categories/commercial.svg" alt="" loading="lazy" width="900" height="1100"><div class="cat__body"><h3>Commercial</h3><span><b data-cat-count="commercial">—</b> <svg class="ic"><use href="#i-arrow"/></svg></span></div></a>
+      <a class="cat reveal" href="properties.html?type=apartment"><img src="assets/images/categories/apartments.jpg" alt="A cluster of tall apartment towers in the foreground of a city skyline" loading="lazy" width="600" height="375"><div class="cat__body"><h3>Apartments</h3><span><b data-cat-count="apartment">—</b> <svg class="ic"><use href="#i-arrow"/></svg></span></div></a>
+      <a class="cat reveal d1" href="properties.html?type=villa"><img src="assets/images/categories/villas.jpg" alt="A white flat-roofed villa with a rectangular swimming pool and an outdoor lounge area" loading="lazy" width="600" height="375"><div class="cat__body"><h3>Villas</h3><span><b data-cat-count="villa">—</b> <svg class="ic"><use href="#i-arrow"/></svg></span></div></a>
+      <a class="cat reveal d2" href="properties.html?type=penthouse"><img src="assets/images/categories/penthouses.jpg" alt="A sunlit city skyline seen from a high roof terrace" loading="lazy" width="600" height="375"><div class="cat__body"><h3>Penthouses</h3><span><b data-cat-count="penthouse">—</b> <svg class="ic"><use href="#i-arrow"/></svg></span></div></a>
+      <a class="cat reveal d3" href="properties.html?type=plot"><img src="assets/images/categories/plots.jpg" alt="An aerial view of surveyed housing lots divided by new roads" loading="lazy" width="600" height="375"><div class="cat__body"><h3>Plots</h3><span><b data-cat-count="plot">—</b> <svg class="ic"><use href="#i-arrow"/></svg></span></div></a>
+      <a class="cat reveal d3" href="properties.html?type=commercial"><img src="assets/images/categories/commercial.jpg" alt="Two teal-and-white glass office towers seen from street level" loading="lazy" width="600" height="375"><div class="cat__body"><h3>Commercial</h3><span><b data-cat-count="commercial">—</b> <svg class="ic"><use href="#i-arrow"/></svg></span></div></a>
     </div>
   </div>
 </section>
@@ -147,7 +147,7 @@ home = head("UrbanNest Realty — Premium Real Estate in Noida | Apartments, Vil
 
 <!-- 10. CONSULTATION CTA -->
 <section class="cta-band" id="consultation">
-  <img src="assets/images/cta-consult.svg" alt="" loading="lazy" width="1920" height="800">
+  <img src="assets/images/cta-consult.jpg" alt="A dense city skyline seen across open water in clear daylight" loading="lazy" width="1600" height="667">
   <div class="container">
     <div class="cta-layout">
       <div class="reveal">
@@ -204,7 +204,7 @@ write("index.html", home)
 props = head("Properties for Sale & Rent in Noida — Search Apartments, Villas, Penthouses, Plots | UrbanNest Realty",
              "Search verified properties in Noida & NCR. Filter by location, type, budget, bedrooms and area — apartments, villas, penthouses, plots and commercial spaces for sale or rent.",
              "properties.html") + header() + '''
-<main id="main">''' + page_hero("assets/images/hero-properties.svg", "Properties", "Find your next <em>address</em>", "Filter by location, budget, type, bedrooms and area. Every listing is verified by our team before it goes live.", "Properties", compact=True) + '''
+<main id="main">''' + page_hero("assets/images/hero-properties.jpg", "Properties", "Find your next <em>address</em>", "Filter by location, budget, type, bedrooms and area. Every listing is verified by our team before it goes live.", "Properties", compact=True) + '''
 <div class="listing-bar">
   <div class="container--wide listing-bar__inner">
     <button class="filters-toggle" type="button" data-filters-open aria-controls="filters" aria-expanded="false"><svg class="ic"><use href="#i-sliders"/></svg> Filters <span class="badge" data-filters-badge>0</span></button>
@@ -240,7 +240,7 @@ props = head("Properties for Sale & Rent in Noida — Search Apartments, Villas,
     <div class="empty" data-empty hidden><h3>No properties match these filters</h3><p>Try widening your budget, removing the bedroom filter or choosing “All locations”. New listings are added every week — tell us what you're after and we'll find it.</p><div class="hero__actions" style="justify-content:center"><button class="btn btn--outline-dark" type="button" data-reset>Reset filters</button><a class="btn btn--dark" href="contact.html#consult">Tell us your brief</a></div></div>
   </section>
 </div>
-<section class="cta-band cta-band--center"><img src="assets/images/cta-consult.svg" alt="" loading="lazy" width="1920" height="800"><div class="container"><span class="eyebrow">Can't find it?</span><h2>Tell us your brief — we'll find it</h2><p class="lead">Off-market homes, builder-floor options and pre-launch inventory don't always make it to the website.</p><div class="hero__actions"><a class="btn btn--primary btn--lg" href="contact.html#consult">Book a Consultation</a><a class="btn btn--outline-light btn--lg" data-href="whatsapp" data-wa-text="Hi UrbanNest Realty! I'm looking for a property — here's my brief:" href="#" target="_blank" rel="noopener"><svg class="ic"><use href="#i-whatsapp"/></svg> WhatsApp your brief</a></div></div></section>
+<section class="cta-band cta-band--center"><img src="assets/images/cta-consult.jpg" alt="A dense city skyline seen across open water in clear daylight" loading="lazy" width="1600" height="667"><div class="container"><span class="eyebrow">Can't find it?</span><h2>Tell us your brief — we'll find it</h2><p class="lead">Off-market homes, builder-floor options and pre-launch inventory don't always make it to the website.</p><div class="hero__actions"><a class="btn btn--primary btn--lg" href="contact.html#consult">Book a Consultation</a><a class="btn btn--outline-light btn--lg" data-href="whatsapp" data-wa-text="Hi UrbanNest Realty! I'm looking for a property — here's my brief:" href="#" target="_blank" rel="noopener"><svg class="ic"><use href="#i-whatsapp"/></svg> WhatsApp your brief</a></div></div></section>
 </main>
 ''' + footer() + '''<script src="js/properties.js"></script></body></html>'''
 write("properties.html", props)
@@ -265,7 +265,7 @@ detail = head("Property details — UrbanNest Realty, Noida", "Photos, price, fl
       <section class="facts" id="details" aria-label="Key facts" data-p-facts></section>
       <section class="prop-section" id="overview"><h2>Overview</h2><div data-p-desc></div></section>
       <section class="prop-section" id="amenities"><h2>Amenities</h2><ul class="amenities" data-p-amenities></ul></section>
-      <section class="prop-section" id="floor-plan"><h2>Floor plan</h2><figure class="floor-plan"><img data-p-floorplan src="assets/images/floor-plans/floor-plan-placeholder.svg" alt="Floor plan" loading="lazy" width="1600" height="1200"><figcaption class="floor-plan__bar"><span>Indicative layout — dimensions to be confirmed on site.</span><a class="btn btn--outline-dark btn--sm" data-p-floorplan-link href="assets/images/floor-plans/floor-plan-placeholder.svg" download><svg class="ic"><use href="#i-download"/></svg> Download floor plan</a></figcaption></figure></section>
+      <section class="prop-section" id="floor-plan"><h2>Floor plan</h2><figure class="floor-plan"><img data-p-floorplan src="assets/images/floor-plans/floor-plan-placeholder.svg" alt="Indicative floor plan: living and dining, kitchen, balcony, three bedrooms and two bathrooms" loading="lazy" width="1600" height="1200"><figcaption class="floor-plan__bar"><span>Indicative layout — dimensions to be confirmed on site.</span><a class="btn btn--outline-dark btn--sm" data-p-floorplan-link href="assets/images/floor-plans/floor-plan-placeholder.svg" download><svg class="ic"><use href="#i-download"/></svg> Download floor plan</a></figcaption></figure></section>
       <section class="prop-section prop-map" id="map"><h2>Location</h2><iframe data-p-map src="about:blank" title="Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe><p class="muted" data-p-mapnote></p><a class="link-arrow" data-p-maplink href="#" target="_blank" rel="noopener">Open in Google Maps <svg class="ic"><use href="#i-arrow"/></svg></a></section>
     </div>
     <aside class="prop-side">
@@ -316,7 +316,7 @@ write("property.html", detail)
 
 # ============================ PROJECTS ============================
 projects = head("New Projects & Launches in Noida — UrbanNest Realty", "New launches and under-construction projects in Noida, Greater Noida West and the Expressway — configurations, price from, possession and RERA details. Request brochures and payment plans.", "projects.html") + header() + '''
-<main id="main">''' + page_hero("assets/images/hero-projects.svg", "New launches", "Projects worth an <em>early look</em>", "Pre-launch pricing, construction-linked plans and ready-to-move phases — with RERA details, bank approvals and payment schedules shared on request.", "Projects") + '''
+<main id="main">''' + page_hero("assets/images/hero-projects.jpg", "New launches", "Projects worth an <em>early look</em>", "Pre-launch pricing, construction-linked plans and ready-to-move phases — with RERA details, bank approvals and payment schedules shared on request.", "Projects") + '''
 <section class="section section--white">
   <div class="container">
     <div class="section-head split reveal"><div><span class="eyebrow">New &amp; upcoming</span><h2>Current projects</h2><p>Filter by construction status. All details are indicative — verify with the developer's RERA filing before booking.</p></div>
@@ -335,7 +335,7 @@ projects = head("New Projects & Launches in Noida — UrbanNest Realty", "New la
     </div>
   </div>
 </section>
-<section class="cta-band cta-band--center"><img src="assets/images/cta-consult.svg" alt="" loading="lazy" width="1920" height="800"><div class="container"><span class="eyebrow">Pre-launch alerts</span><h2>Hear about launches before they open</h2><p class="lead">Share your budget and preferred sectors — we'll message you when a matching project opens for booking.</p><div class="hero__actions"><a class="btn btn--primary btn--lg" href="contact.html?topic=New%20project%20enquiry#contact-form">Register interest</a><a class="btn btn--outline-light btn--lg" data-href="whatsapp" data-wa-text="Hi UrbanNest Realty! Please add me to your new-launch alerts. My budget and preferred sectors:" href="#" target="_blank" rel="noopener"><svg class="ic"><use href="#i-whatsapp"/></svg> WhatsApp</a></div></div></section>
+<section class="cta-band cta-band--center"><img src="assets/images/cta-consult.jpg" alt="A dense city skyline seen across open water in clear daylight" loading="lazy" width="1600" height="667"><div class="container"><span class="eyebrow">Pre-launch alerts</span><h2>Hear about launches before they open</h2><p class="lead">Share your budget and preferred sectors — we'll message you when a matching project opens for booking.</p><div class="hero__actions"><a class="btn btn--primary btn--lg" href="contact.html?topic=New%20project%20enquiry#contact-form">Register interest</a><a class="btn btn--outline-light btn--lg" data-href="whatsapp" data-wa-text="Hi UrbanNest Realty! Please add me to your new-launch alerts. My budget and preferred sectors:" href="#" target="_blank" rel="noopener"><svg class="ic"><use href="#i-whatsapp"/></svg> WhatsApp</a></div></div></section>
 </main>
 ''' + footer() + '''<script>
 (function(){var g=document.querySelector("[data-all-projects]"),e=document.querySelector("[data-projects-empty]"),f=document.querySelector("[data-project-filters]");if(!g||!window.PROJECTS)return;
@@ -346,7 +346,7 @@ write("projects.html", projects)
 
 # ============================ ABOUT ============================
 about = head("About UrbanNest Realty — Premium Real Estate Advisory in Noida", "The story, values and team behind UrbanNest Realty — a boutique real estate advisory in Noida focused on verified listings, honest pricing and end-to-end support.", "about.html") + header() + '''
-<main id="main">''' + page_hero("assets/images/hero-about.svg", "About us", "A boutique advisory, <em>not</em> a listing farm", "Fewer properties, each one checked. Clear advice, clear pricing and consultants who stay with you from the first site visit to the keys.", "About") + '''
+<main id="main">''' + page_hero("assets/images/hero-about.jpg", "About us", "A boutique advisory, <em>not</em> a listing farm", "Fewer properties, each one checked. Clear advice, clear pricing and consultants who stay with you from the first site visit to the keys.", "About") + '''
 <section class="section section--white">
   <div class="container">
     <div class="split">
@@ -355,7 +355,7 @@ about = head("About UrbanNest Realty — Premium Real Estate Advisory in Noida",
         <p>Today we're a small team of specialists covering luxury homes, first homes, villas, plots and commercial space across Noida, Greater Noida West and the wider NCR — still visiting every property, still saying no when it's warranted.</p>
         <p class="muted" style="font-size:.85rem">[Founder name, founding year and origin story — replace with the real version.]</p>
         <blockquote class="quote">"We'd rather lose a deal than recommend the wrong tower."<cite>Founder, UrbanNest Realty</cite></blockquote></div>
-      <div class="split__media reveal d1"><div class="frame"><img src="assets/images/about-office.svg" alt="Inside the UrbanNest Realty office in Noida" loading="lazy" width="1200" height="900"></div><div class="frame frame--tall"><img src="assets/images/about-site-visit.svg" alt="A consultant walking a client through a site visit" loading="lazy" width="900" height="1200"></div></div>
+      <div class="split__media reveal d1"><div class="frame"><img src="assets/images/about-office.jpg" alt="A glass-walled meeting room with a long table and stacking chairs, seen from the office floor" loading="lazy" width="1000" height="750"></div><div class="frame frame--tall"><img src="assets/images/about-site-visit.jpg" alt="A consultant in a dark suit holding a set of keys and a clipboard during a site visit" loading="lazy" width="600" height="800"></div></div>
     </div>
     <div class="timeline reveal">
       <div><b>Year 1</b><p>Two consultants, one sector belt: the Noida Expressway. Every property visited in person.</p></div>
@@ -381,14 +381,14 @@ about = head("About UrbanNest Realty — Premium Real Estate Advisory in Noida",
     <div class="agent-grid" data-home-agents></div>
   </div>
 </section>
-<section class="cta-band cta-band--center"><img src="assets/images/cta-consult.svg" alt="" loading="lazy" width="1920" height="800"><div class="container"><span class="eyebrow">Work with us</span><h2>Start with a conversation</h2><p class="lead">Tell us what you're looking for and we'll tell you honestly whether — and where — we can help.</p><div class="hero__actions"><a class="btn btn--primary btn--lg" href="contact.html#consult">Book a Consultation</a><a class="btn btn--outline-light btn--lg" href="properties.html">Browse properties</a></div></div></section>
+<section class="cta-band cta-band--center"><img src="assets/images/cta-consult.jpg" alt="A dense city skyline seen across open water in clear daylight" loading="lazy" width="1600" height="667"><div class="container"><span class="eyebrow">Work with us</span><h2>Start with a conversation</h2><p class="lead">Tell us what you're looking for and we'll tell you honestly whether — and where — we can help.</p><div class="hero__actions"><a class="btn btn--primary btn--lg" href="contact.html#consult">Book a Consultation</a><a class="btn btn--outline-light btn--lg" href="properties.html">Browse properties</a></div></div></section>
 </main>
 ''' + footer() + '''</body></html>'''
 write("about.html", about)
 
 # ============================ AGENTS ============================
 agents = head("Our Agents — Real Estate Consultants in Noida | UrbanNest Realty", "Meet UrbanNest Realty's consultants — specialists in luxury apartments, first homes, villas, plots and commercial space across Noida & NCR. Call or WhatsApp the right agent for your search.", "agents.html") + header() + '''
-<main id="main">''' + page_hero("assets/images/hero-agents.svg", "Our agents", "People who know <em>the ground</em>", "Specialist consultants by property type and sector. Call or WhatsApp the one who matches your search — or tell us your brief and we'll route it.", "Agents") + '''
+<main id="main">''' + page_hero("assets/images/hero-agents.jpg", "Our agents", "People who know <em>the ground</em>", "Specialist consultants by property type and sector. Call or WhatsApp the one who matches your search — or tell us your brief and we'll route it.", "Agents") + '''
 <section class="section section--white">
   <div class="container">
     <div class="section-head reveal"><span class="eyebrow">The team</span><h2>Meet your consultants</h2><p>Names, photos and numbers below are placeholders — replace them in <code>js/agents-data.js</code>.</p></div>
@@ -399,18 +399,18 @@ agents = head("Our Agents — Real Estate Consultants in Noida | UrbanNest Realt
   <div class="container">
     <div class="split">
       <div class="split__body reveal"><span class="eyebrow">Join UrbanNest</span><h2>Consultants who'd rather advise than push</h2><p>We're always looking for experienced residential and commercial consultants in Noida and Greater Noida who believe in verified listings and honest advice. Share your profile and the segments you work in.</p><a class="btn btn--dark" data-href="mail" href="#">Email your profile</a></div>
-      <div class="split__media reveal d1"><div class="frame"><img src="assets/images/about-office.svg" alt="The UrbanNest Realty office" loading="lazy" width="1200" height="900"></div></div>
+      <div class="split__media reveal d1"><div class="frame"><img src="assets/images/about-office.jpg" alt="A glass-walled meeting room with a long table and stacking chairs, seen from the office floor" loading="lazy" width="1000" height="750"></div></div>
     </div>
   </div>
 </section>
-<section class="cta-band cta-band--center"><img src="assets/images/cta-consult.svg" alt="" loading="lazy" width="1920" height="800"><div class="container"><span class="eyebrow">Not sure who to call?</span><h2>Tell us your brief, we'll route it</h2><div class="hero__actions"><a class="btn btn--primary btn--lg" href="contact.html#consult">Book a Consultation</a><a class="btn btn--outline-light btn--lg" data-href="whatsapp" href="#" target="_blank" rel="noopener"><svg class="ic"><use href="#i-whatsapp"/></svg> WhatsApp us</a></div></div></section>
+<section class="cta-band cta-band--center"><img src="assets/images/cta-consult.jpg" alt="A dense city skyline seen across open water in clear daylight" loading="lazy" width="1600" height="667"><div class="container"><span class="eyebrow">Not sure who to call?</span><h2>Tell us your brief, we'll route it</h2><div class="hero__actions"><a class="btn btn--primary btn--lg" href="contact.html#consult">Book a Consultation</a><a class="btn btn--outline-light btn--lg" data-href="whatsapp" href="#" target="_blank" rel="noopener"><svg class="ic"><use href="#i-whatsapp"/></svg> WhatsApp us</a></div></div></section>
 </main>
 ''' + footer() + '''</body></html>'''
 write("agents.html", agents)
 
 # ============================ CONTACT ============================
 contact = head("Contact UrbanNest Realty — Book a Consultation | Noida", "Get in touch with UrbanNest Realty in Noida — book a free consultation, call, WhatsApp or send a message. Office address, hours and map.", "contact.html", LD) + header() + '''
-<main id="main">''' + page_hero("assets/images/hero-contact.svg", "Contact", "Let's find your <em>next address</em>", "Book a free consultation, ask about a listing, or tell us what you'd like to sell or lease.", "Contact") + '''
+<main id="main">''' + page_hero("assets/images/hero-contact.jpg", "Contact", "Let's find your <em>next address</em>", "Book a free consultation, ask about a listing, or tell us what you'd like to sell or lease.", "Contact") + '''
 <section class="section section--white" id="consult">
   <div class="container">
     <div class="contact-layout">
@@ -453,7 +453,7 @@ write("contact.html", contact)
 
 # ============================ PRIVACY (minimal, noindex) ============================
 priv = head("Privacy Policy — UrbanNest Realty", "How UrbanNest Realty handles the information you share through this website.", "privacy.html", '<meta name="robots" content="noindex">') + header() + '''
-<main id="main">''' + page_hero("assets/images/hero-contact.svg", "Legal", "Privacy policy", "Plain-English summary of how we handle your information.", "Privacy", compact=True) + '''
+<main id="main">''' + page_hero("assets/images/hero-contact.jpg", "Legal", "Privacy policy", "Plain-English summary of how we handle your information.", "Privacy", compact=True) + '''
 <section class="section section--white"><div class="container prose" style="max-width:760px">
 <p class="muted" style="font-size:.85rem">[Template — have this reviewed and completed by your legal advisor before launch.]</p>
 <h2>What we collect</h2><p>When you enquire about a property, request a call back or contact us, you share your name, phone number and optionally your email, budget and message. Submissions are sent to us via WhatsApp (and, if configured, our CRM or email) so we can respond to you.</p>

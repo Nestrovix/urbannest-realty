@@ -1,20 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200">
-<rect width="1600" height="1200" fill="#F6F5F2"/>
-<g fill="none" stroke="#1C1C1E" stroke-width="6" stroke-linejoin="round">
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200" role="img" aria-label="Indicative floor plan">
+<rect width="1600" height="1200" fill="#F4F5F7"/>
+<g stroke="#DDDFE4" stroke-width="1">
+<path d="M0 40h1600M0 80h1600M0 120h1600M0 160h1600M0 200h1600M0 240h1600M0 280h1600M0 320h1600M0 360h1600M0 400h1600M0 440h1600M0 480h1600M0 520h1600M0 560h1600M0 600h1600M0 640h1600M0 680h1600M0 720h1600M0 760h1600M0 800h1600M0 840h1600M0 880h1600M0 920h1600M0 960h1600M0 1000h1600M0 1040h1600M0 1080h1600M0 1120h1600M0 1160h1600"/>
+<path d="M40 0v1200M80 0v1200M120 0v1200M160 0v1200M200 0v1200M240 0v1200M280 0v1200M320 0v1200M360 0v1200M400 0v1200M440 0v1200M480 0v1200M520 0v1200M560 0v1200M600 0v1200M640 0v1200M680 0v1200M720 0v1200M760 0v1200M800 0v1200M840 0v1200M880 0v1200M920 0v1200M960 0v1200M1000 0v1200M1040 0v1200M1080 0v1200M1120 0v1200M1160 0v1200M1200 0v1200M1240 0v1200M1280 0v1200M1320 0v1200M1360 0v1200M1400 0v1200M1440 0v1200M1480 0v1200M1520 0v1200M1560 0v1200"/>
+</g>
+<rect x="220" y="160" width="1160" height="880" fill="#FFFFFF"/>
+<rect x="220" y="860" width="520" height="180" fill="#ECEEF1"/>
+<g fill="none" stroke="#17181B" stroke-width="8" stroke-linejoin="miter" stroke-linecap="square">
 <rect x="220" y="160" width="1160" height="880"/>
+</g>
+<g fill="none" stroke="#17181B" stroke-width="5" stroke-linejoin="miter" stroke-linecap="square">
 <path d="M220 560h520M740 160v400M740 760v280M740 760h640M1040 560v200M1040 160v400M1380 560h-340"/>
 <path d="M220 860h520"/>
 </g>
-<g fill="none" stroke="#B8924A" stroke-width="4"><path d="M560 560a80 80 0 0 1 80 80"/><path d="M640 560v80"/><path d="M1040 640a70 70 0 0 1 70 70"/><path d="M1110 640v70"/><path d="M400 860a70 70 0 0 0 -70 70"/><path d="M330 860v70"/><path d="M900 760a70 70 0 0 0 -70 -70"/><path d="M900 690v70"/></g>
-<g font-family="Inter,system-ui,sans-serif" fill="#1C1C1E" font-size="24" font-weight="600" text-anchor="middle">
-<text x="480" y="370">LIVING / DINING</text><text x="480" y="410" font-weight="400" fill="#6B6B70">22' × 14'</text>
-<text x="890" y="370">MASTER BEDROOM</text><text x="890" y="410" font-weight="400" fill="#6B6B70">16' × 12'</text>
-<text x="1210" y="370">BEDROOM 2</text><text x="1210" y="410" font-weight="400" fill="#6B6B70">13' × 11'</text>
-<text x="480" y="720">KITCHEN</text><text x="480" y="760" font-weight="400" fill="#6B6B70">12' × 9'</text>
+<g fill="none" stroke="#2F5BEA" stroke-width="4" stroke-linecap="round">
+<path d="M560 560a80 80 0 0 1 80 80"/><path d="M640 560v80"/>
+<path d="M1040 640a70 70 0 0 1 70 70"/><path d="M1110 640v70"/>
+<path d="M400 860a70 70 0 0 0 -70 70"/><path d="M330 860v70"/>
+<path d="M900 760a70 70 0 0 0 -70 -70"/><path d="M900 690v70"/>
+</g>
+<g font-family="'Bricolage Grotesque',system-ui,-apple-system,'Segoe UI',sans-serif" fill="#17181B" font-size="24" font-weight="600" text-anchor="middle" letter-spacing="1.2">
+<text x="480" y="370">LIVING / DINING</text><text x="480" y="410" font-weight="400" fill="#63666E" letter-spacing="0">22' × 14'</text>
+<text x="890" y="370">MASTER BEDROOM</text><text x="890" y="410" font-weight="400" fill="#63666E" letter-spacing="0">16' × 12'</text>
+<text x="1210" y="370">BEDROOM 2</text><text x="1210" y="410" font-weight="400" fill="#63666E" letter-spacing="0">13' × 11'</text>
+<text x="480" y="720">KITCHEN</text><text x="480" y="760" font-weight="400" fill="#63666E" letter-spacing="0">12' × 9'</text>
 <text x="480" y="960">BALCONY</text>
 <text x="890" y="670">BATH</text>
 <text x="1210" y="670">BATH</text>
-<text x="1060" y="920">BEDROOM 3</text><text x="1060" y="960" font-weight="400" fill="#6B6B70">12' × 11'</text>
+<text x="1060" y="920">BEDROOM 3</text><text x="1060" y="960" font-weight="400" fill="#63666E" letter-spacing="0">12' × 11'</text>
 </g>
-<g font-family="ui-monospace,Menlo,Consolas,monospace" fill="#1C1C1E" opacity=".45" font-size="20"><text x="60" y="1140">FLOOR PLAN PLACEHOLDER — replace with the real floor plan (PNG/JPG 1600×1200) and link the PDF in properties-data.js</text></g>
+<g fill="none" stroke="#17181B" stroke-width="3">
+<circle cx="1470" cy="1105" r="30"/><path d="M1470 1082v46M1470 1082l-9 14M1470 1082l9 14"/>
+</g>
+<text x="1470" y="1160" font-family="'Bricolage Grotesque',system-ui,sans-serif" font-size="20" font-weight="600" fill="#17181B" text-anchor="middle" letter-spacing="1.5">N</text>
+<rect x="60" y="1082" width="14" height="4" fill="#2F5BEA"/>
+<text x="86" y="1092" font-family="'Bricolage Grotesque',system-ui,sans-serif" font-size="20" font-weight="600" fill="#17181B" letter-spacing="1.2">INDICATIVE FLOOR PLAN</text>
+<text x="60" y="1140" font-family="'Bricolage Grotesque',system-ui,sans-serif" font-size="19" fill="#63666E">Schematic layout — not to scale. Replace with the sanctioned plan and link the PDF in properties-data.js</text>
 </svg>

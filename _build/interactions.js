@@ -11,7 +11,7 @@ module.exports = async (browser, BASE, report) => {
     const src = ['properties-data.js', 'projects-data.js', 'agents-data.js'].map((f) => fs.readFileSync(path.join(ROOT, 'js', f), 'utf8')).join('\n');
     const ids = [...src.matchAll(/\{ id: "([^"]+)", title:/g)].map((m) => m[1]);
     const missing = [];
-    ids.forEach((id) => { for (let n = 1; n <= 4; n++) { const f = path.join(ROOT, 'assets/images/properties', `${id}-${n}.svg`); if (!fs.existsSync(f)) missing.push(`${id}-${n}`); } });
+    ids.forEach((id) => { for (let n = 1; n <= 4; n++) { const f = path.join(ROOT, 'assets/images/properties', `${id}-${n}.jpg`); if (!fs.existsSync(f)) missing.push(`${id}-${n}`); } });
     [...src.matchAll(/"(assets\/images\/[^"]+\.svg)"/g)].forEach((m) => { if (!fs.existsSync(path.join(ROOT, m[1]))) missing.push(m[1]); });
     C['data images exist'] = { properties: ids.length, missing };
     if (missing.length) report.missingAssets.push(...missing.map((m) => `data: ${m}`));

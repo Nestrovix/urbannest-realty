@@ -10,10 +10,10 @@
 <meta property="og:title" content="Properties for Sale & Rent in Noida — Search Apartments, Villas, Penthouses, Plots | UrbanNest Realty"><meta property="og:description" content="Search verified properties in Noida & NCR. Filter by location, type, budget, bedrooms and area — apartments, villas, penthouses, plots and commercial spaces for sale or rent.">
 <meta property="og:image" content="https://urbannest.vercel.app/assets/og-image.png"><meta property="og:url" content="https://urbannest.vercel.app/properties.html">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#1C1C1E">
+<meta name="theme-color" content="#17181B">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="assets/fonts/dm-serif-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/source-serif-4-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/style.css">
 <script>document.documentElement.classList.add("js")</script>
 
@@ -62,7 +62,7 @@
 </defs></svg>
 <header class="site-header" id="top">
   <div class="container--wide">
-    <a class="brand" href="index.html" aria-label="UrbanNest Realty — home"><svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1C1C1E"/><path d="M14 31 32 15l18 16" fill="none" stroke="#B8924A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 29v19h24V29" fill="none" stroke="#B8924A" stroke-width="3.5" stroke-linejoin="round"/><rect x="28" y="37" width="8" height="11" rx="1" fill="#D3B274"/></svg><span>UrbanNest<small>Realty · Noida</small></span></a>
+    <a class="brand" href="index.html" aria-label="UrbanNest Realty — home"><svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" fill="#17181B"/><rect x="13" y="15" width="38" height="7" fill="#2F5BEA"/><rect x="13" y="28" width="26" height="7" fill="#F4F5F7"/><rect x="13" y="41" width="32" height="7" fill="#F4F5F7" opacity=".45"/></svg><span>UrbanNest<small>Realty · Noida</small></span></a>
     <nav class="nav" aria-label="Primary">
       <ul class="nav__links"><li><a href="index.html">Home</a></li><li><a href="properties.html">Properties</a></li><li><a href="projects.html">Projects</a></li><li><a href="about.html">About</a></li><li><a href="agents.html">Agents</a></li><li><a href="contact.html">Contact</a></li></ul>
       <div class="nav__cta">
@@ -83,27 +83,19 @@
   </div>
 </div>
 <main id="main"><section class="page-hero page-hero--compact">
-  <div class="hero__media"><img src="assets/images/hero-properties.svg" alt="" width="1920" height="800" fetchpriority="high"></div>
-  <div class="hero__overlay"></div>
   <div class="container page-hero__content">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span aria-current="page">Properties</span></nav>
     <span class="eyebrow">Properties</span>
     <h1>Find your next <em>address</em></h1>
     <p class="lead">Filter by location, budget, type, bedrooms and area. Every listing is verified by our team before it goes live.</p>
+  <div class="hero__media"><img src="assets/images/hero-properties.jpg" alt="Two tall contemporary residential buildings photographed from below against a clear blue sky" width="1600" height="667" fetchpriority="high"></div>
   </div>
 </section>
-<div class="listing-bar">
-  <div class="container--wide listing-bar__inner">
-    <button class="filters-toggle" type="button" data-filters-open aria-controls="filters" aria-expanded="false"><svg class="ic"><use href="#i-sliders"/></svg> Filters <span class="badge" data-filters-badge>0</span></button>
-    <div class="seg" role="group" aria-label="Buy or rent" data-purpose-seg><button type="button" data-purpose="buy" aria-pressed="true">Buy</button><button type="button" data-purpose="rent" aria-pressed="false">Rent</button></div>
-    <p class="listing-bar__count" data-count-text aria-live="polite"><b>…</b> properties</p>
-    <div class="listing-bar__sort"><label for="sort">Sort by</label><select id="sort"><option value="recommended">Recommended</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="newest">Newest first</option><option value="area-desc">Largest area</option></select></div>
-  </div>
-</div>
 <div class="container--wide listing">
   <aside class="filters" id="filters" aria-label="Filter properties">
     <div class="filters__head"><h2>Filters</h2><div style="display:flex;gap:.5rem;align-items:center"><button class="link-reset" type="button" data-reset>Reset</button><button class="filters__close" type="button" data-filters-close aria-label="Close filters"><svg class="ic"><use href="#i-x"/></svg></button></div></div>
     <form id="filter-form" class="filters__body" novalidate>
+      <div class="filters__seg"><span id="purpose-label">Purpose</span><div class="seg" role="group" aria-labelledby="purpose-label" data-purpose-seg><button type="button" data-purpose="buy" aria-pressed="true">Buy</button><button type="button" data-purpose="rent" aria-pressed="false">Rent</button></div></div>
       <div class="sfield"><label for="f-q">Keyword</label><input id="f-q" name="q" type="search" placeholder="e.g. golf, furnished, metro" autocomplete="off"></div>
       <div class="sfield"><label for="f-loc">Location</label><select id="f-loc" name="loc"><option value="">All locations</option></select></div>
       <div class="sfield"><label for="f-type">Property type</label><select id="f-type" name="type"><option value="">All types</option></select></div>
@@ -121,20 +113,28 @@
   </aside>
   <div class="filters__backdrop" data-filters-backdrop></div>
   <section class="results" aria-label="Search results" data-results-top>
-    <div class="results__head"><h2 class="results__title" data-results-title>Properties for sale in Noida &amp; NCR</h2></div>
+    <div class="results__head">
+      <h2 class="results__title" data-results-title>Properties for sale in Noida &amp; NCR</h2>
+      <button class="filters-toggle" type="button" data-filters-open aria-controls="filters" aria-expanded="false"><svg class="ic"><use href="#i-sliders"/></svg> Filters <span class="badge" data-filters-badge>0</span></button>
+      <p class="listing-bar__count" data-count-text aria-live="polite"><b>…</b> properties</p>
+      <div class="listing-bar__sort"><label for="sort">Sort by</label><select id="sort"><option value="recommended">Recommended</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="newest">Newest first</option><option value="area-desc">Largest area</option></select></div>
+    </div>
     <div class="active-chips" data-active-chips></div>
-    <div class="prop-grid" data-results aria-live="polite"></div>
+    <div class="pindex">
+      <div class="pindex__head"><span>№</span><span>Property</span><span>Locality</span><span>Configuration</span><span>Area</span><span>Price</span><span></span></div>
+      <div class="pindex__rows" data-results aria-live="polite"></div>
+    </div>
     <div class="empty" data-empty hidden><h3>No properties match these filters</h3><p>Try widening your budget, removing the bedroom filter or choosing “All locations”. New listings are added every week — tell us what you're after and we'll find it.</p><div class="hero__actions" style="justify-content:center"><button class="btn btn--outline-dark" type="button" data-reset>Reset filters</button><a class="btn btn--dark" href="contact.html#consult">Tell us your brief</a></div></div>
   </section>
 </div>
-<section class="cta-band cta-band--center"><img src="assets/images/cta-consult.svg" alt="" loading="lazy" width="1920" height="800"><div class="container"><span class="eyebrow">Can't find it?</span><h2>Tell us your brief — we'll find it</h2><p class="lead">Off-market homes, builder-floor options and pre-launch inventory don't always make it to the website.</p><div class="hero__actions"><a class="btn btn--primary btn--lg" href="contact.html#consult">Book a Consultation</a><a class="btn btn--outline-light btn--lg" data-href="whatsapp" data-wa-text="Hi UrbanNest Realty! I'm looking for a property — here's my brief:" href="#" target="_blank" rel="noopener"><svg class="ic"><use href="#i-whatsapp"/></svg> WhatsApp your brief</a></div></div></section>
+<section class="cta-band cta-band--center"><img src="assets/images/cta-consult.jpg" alt="A dense city skyline seen across open water in clear daylight" loading="lazy" width="1600" height="667"><div class="container"><span class="eyebrow">Can't find it?</span><h2>Tell us your brief — we'll find it</h2><p class="lead">Off-market homes, builder-floor options and pre-launch inventory don't always make it to the website.</p><div class="hero__actions"><a class="btn btn--primary btn--lg" href="contact.html#consult">Book a Consultation</a><a class="btn btn--outline-light btn--lg" data-href="whatsapp" data-wa-text="Hi UrbanNest Realty! I'm looking for a property — here's my brief:" href="#" target="_blank" rel="noopener"><svg class="ic"><use href="#i-whatsapp"/></svg> WhatsApp your brief</a></div></div></section>
 </main>
 <!-- 12. FOOTER -->
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
       <div>
-        <a class="brand" href="index.html"><svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1C1C1E"/><path d="M14 31 32 15l18 16" fill="none" stroke="#B8924A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 29v19h24V29" fill="none" stroke="#B8924A" stroke-width="3.5" stroke-linejoin="round"/><rect x="28" y="37" width="8" height="11" rx="1" fill="#D3B274"/></svg><span>UrbanNest<small>Realty · Noida</small></span></a>
+        <a class="brand" href="index.html"><svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" fill="#17181B"/><rect x="13" y="15" width="38" height="7" fill="#2F5BEA"/><rect x="13" y="28" width="26" height="7" fill="#F4F5F7"/><rect x="13" y="41" width="32" height="7" fill="#F4F5F7" opacity=".45"/></svg><span>UrbanNest<small>Realty · Noida</small></span></a>
         <p>Premium residential and commercial real estate advisory in Noida, Greater Noida and the wider NCR — verified listings, honest pricing and end-to-end support.</p>
         <div class="socials mt-3">
           <a data-href="instagram" href="#" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ic"><use href="#i-instagram"/></svg></a>

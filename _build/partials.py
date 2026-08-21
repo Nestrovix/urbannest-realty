@@ -41,7 +41,7 @@ ICONS = '''<svg width="0" height="0" style="position:absolute" aria-hidden="true
 <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36z"/></symbol>
 </defs></svg>'''
 
-BRAND_MARK = '''<svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1C1C1E"/><path d="M14 31 32 15l18 16" fill="none" stroke="#B8924A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 29v19h24V29" fill="none" stroke="#B8924A" stroke-width="3.5" stroke-linejoin="round"/><rect x="28" y="37" width="8" height="11" rx="1" fill="#D3B274"/></svg>'''
+BRAND_MARK = '''<svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" fill="#17181B"/><rect x="13" y="15" width="38" height="7" fill="#2F5BEA"/><rect x="13" y="28" width="26" height="7" fill="#F4F5F7"/><rect x="13" y="41" width="32" height="7" fill="#F4F5F7" opacity=".45"/></svg>'''
 
 NAV_LINKS = [("index.html","Home"),("properties.html","Properties"),("projects.html","Projects"),("about.html","About"),("agents.html","Agents"),("contact.html","Contact")]
 
@@ -129,19 +129,29 @@ def head(title, desc, canonical, extra="", og_img="assets/og-image.png", body_cl
 <meta property="og:title" content="{title}"><meta property="og:description" content="{desc}">
 <meta property="og:image" content="{DOMAIN}{og_img}"><meta property="og:url" content="{DOMAIN}{canonical}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#1C1C1E">
+<meta name="theme-color" content="#17181B">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="assets/fonts/dm-serif-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/source-serif-4-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/style.css">
 <script>document.documentElement.classList.add("js")</script>
 {extra}
 </head>
 <body{(' class="' + body_class + '"') if body_class else ''}>'''
 
-def page_hero(img, eyebrow, title, text, crumb, compact=False):
+# Alt text for the page-hero photographs (see CREDITS.md for the source of each shot).
+HERO_ALT = {
+    "assets/images/hero-properties.jpg": "Two tall contemporary residential buildings photographed from below against a clear blue sky",
+    "assets/images/hero-projects.jpg": "A tower crane standing over a new development, its jib crossing an open blue sky",
+    "assets/images/hero-about.jpg": "A long office corridor with glass partition walls, concrete columns and exposed ceiling ducts",
+    "assets/images/hero-agents.jpg": "Four colleagues with open laptops around a meeting table, listening to a fifth person speaking",
+    "assets/images/hero-contact.jpg": "A bright reception lobby with a marble front desk, pale stone floor and potted plants",
+}
+
+def page_hero(img, eyebrow, title, text, crumb, compact=False, img_alt=None):
+    img_alt = HERO_ALT.get(img, "") if img_alt is None else img_alt
     return f'''<section class="page-hero{' page-hero--compact' if compact else ''}">
-  <div class="hero__media"><img src="{img}" alt="" width="1920" height="800" fetchpriority="high"></div>
+  <div class="hero__media"><img src="{img}" alt="{img_alt}" width="1600" height="667" fetchpriority="high"></div>
   <div class="hero__overlay"></div>
   <div class="container page-hero__content">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span aria-current="page">{crumb}</span></nav>

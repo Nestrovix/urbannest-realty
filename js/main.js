@@ -154,24 +154,120 @@
       </div>
     </article>`;
 
-  /* ---------- Search panels (home hero + anywhere with [data-search-panel]) ---------- */
-  $$("[data-search-panel]").forEach((form) => {
-    const seg = $(".seg", form), purposeIn = $("input[name=purpose]", form);
-    const min = $("select[name=min]", form), max = $("select[name=max]", form);
-    UN.buildLocationOptions($("select[name=loc]", form));
-    UN.buildTypeOptions($("select[name=type]", form));
-    const setPurpose = (p) => { purposeIn.value = p; $$("button", seg).forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.purpose === p))); UN.buildPriceOptions(min, p, "min"); UN.buildPriceOptions(max, p, "max"); };
-    setPurpose(purposeIn.value || "buy");
-    seg?.addEventListener("click", (e) => { const b = e.target.closest("button[data-purpose]"); if (b) setPurpose(b.dataset.purpose); });
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const sp = new URLSearchParams();
-      new FormData(form).forEach((v, k) => { if (String(v).trim() !== "") sp.set(k, v); });
-      location.href = `properties.html?${sp.toString()}`;
+  /* ---------- Home hero: THE QUERY BUILDER ----------
+     "I'm looking to [Buy] a [3 BHK] in [Sector 150] under [₹2 Cr]" — every option list
+     is derived from window.PROPERTIES / PROPERTY_TYPES / LOCATIONS / PRICE_STEPS, the
+     count is the same predicate properties.js filters with, and the link carries the
+     selection over as the params that page already reads. */
+  const QB = $("[data-query-builder]");
+  if (QB && (window.PROPERTIES || []).length) {
+    const D = window.PROPERTIES;
+    const el = {
+      purpose: $("[data-qb-purpose]", QB), what: $("[data-qb-what]", QB),
+      loc: $("[data-qb-loc]", QB), max: $("[data-qb-max]", QB),
+      beds: $("[data-qb-beds]", QB), type: $("[data-qb-type]", QB),
+      article: $("[data-qb-article]", QB), prep: $("[data-qb-prep]", QB),
+      count: $("[data-qb-count]", QB), link: $("[data-qb-link]", QB)
+    };
+    const opt = (v, label) => `<option value="${esc(v)}">${esc(label)}</option>`;
+    const article = (word) => (/^[aeiou]/i.test(word) ? "an" : "a");
+    /* PROPERTY_TYPES that name no plural of their own are mass nouns ("Commercial") —
+       give them a counting noun so the sentence and the count both read as English. */
+    const one = (t) => (t.label === t.plural ? `${t.label.toLowerCase()} space` : t.label.toLowerCase());
+    const many = (t) => (t.label === t.plural ? `${t.label.toLowerCase()} spaces` : t.plural.toLowerCase());
+
+    /* --- options, all from the data --- */
+    const purposes = [["buy", "Buy"], ["rent", "Rent"]].filter(([id]) => D.some((p) => p.purpose === id));
+    el.purpose.innerHTML = purposes.map(([id, label]) => opt(id, label)).join("");
+
+    const bedSizes = [...new Set(D.filter((p) => p.beds > 0).map((p) => Math.min(p.beds, 5)))].sort((a, b) => a - b);
+    const types = (window.PROPERTY_TYPES || []).filter((t) => D.some((p) => p.type === t.id));
+    el.what.innerHTML =
+      opt("", "home") +
+      (bedSizes.length ? `<optgroup label="By size">${bedSizes.map((n) => opt(`beds:${n}`, `${n}${n === 5 ? "+" : ""} BHK`)).join("")}</optgroup>` : "") +
+      (types.length ? `<optgroup label="By type">${types.map((t) => opt(`type:${t.id}`, one(t))).join("")}</optgroup>` : "");
+
+    const locs = (window.LOCATIONS || []).filter((l) => D.some((p) => p.location === l));
+    el.loc.innerHTML = opt("", "Noida & NCR") + locs.map((l) => opt(l, l)).join("");
+
+    /* budget steps: only the rungs of PRICE_STEPS that at least one listing sits under,
+       so every option in the list can actually return something */
+    const buildBudget = () => {
+      const purpose = el.purpose.value, prev = el.max.value;
+      const steps = (UN.PRICE_STEPS[purpose] || []).filter((v) => D.some((p) => p.purpose === purpose && p.price <= v));
+      el.max.innerHTML = opt("", "any price") + steps.map((v) => opt(v, UN.fmtPriceLabel(v) + (purpose === "rent" ? "/mo" : ""))).join("");
+      el.max.value = [...el.max.options].some((o) => o.value === prev) ? prev : "";
+    };
+
+    /* --- the same filter predicate properties.js uses, for these five params --- */
+    const split = () => { const [kind, val] = (el.what.value || "").split(":"); return { kind, val }; };
+    const matches = () => {
+      const { kind, val } = split(), purpose = el.purpose.value, loc = el.loc.value, max = el.max.value;
+      return D.filter((p) => {
+        if (p.purpose !== purpose) return false;
+        if (loc && p.location !== loc) return false;
+        if (kind === "type" && p.type !== val) return false;
+        if (kind === "beds") { const b = +val; if (b >= 5 ? p.beds < 5 : p.beds !== b) return false; }
+        if (max && p.price > +max) return false;
+        return true;
+      });
+    };
+    const params = () => {
+      const { kind, val } = split(), q = new URLSearchParams();
+      q.set("purpose", el.purpose.value);
+      if (el.loc.value) q.set("loc", el.loc.value);
+      if (kind === "type") q.set("type", val);
+      if (kind === "beds") q.set("beds", val);
+      if (el.max.value) q.set("max", el.max.value);
+      return q;
+    };
+
+    /* Each control is sized to the label it currently shows, via the hidden ghost span
+       next to it — otherwise a native <select> reserves the width of its widest option
+       and the sentence falls apart into columns. */
+    const slots = $$(".qb-slot select", QB);
+    const sizeSlots = () => slots.forEach((sel) => {
+      const ghost = $(".qb-ghost", sel.parentElement);
+      if (!ghost) return;
+      ghost.textContent = sel.options[sel.selectedIndex]?.text || "";
+      sel.style.width = Math.ceil(ghost.getBoundingClientRect().width) + "px";
     });
-    const hint = $("[data-search-hint]", form);
-    if (hint && window.PROPERTIES) hint.textContent = `${window.PROPERTIES.length} listings across Noida & NCR`;
-  });
+
+    let fade;
+    const update = () => {
+      const { kind, val } = split();
+      const t = kind === "type" ? types.find((x) => x.id === val) : null;
+      const n = matches().length;
+      const noun = t ? (n === 1 ? one(t) : many(t)) : n === 1 ? "home" : "homes";
+      /* sentence grammar */
+      const chosen = el.what.options[el.what.selectedIndex]?.text || "home";
+      el.article.textContent = article(chosen);
+      el.prep.textContent = el.max.value ? "under" : "at";
+      /* hidden fields keep the no-JS GET submit honest */
+      el.beds.value = kind === "beds" ? val : "";
+      el.type.value = kind === "type" ? val : "";
+      /* count + link */
+      el.count.innerHTML = n === 0 ? `<b>No ${esc(noun)}</b> match yet` : `<b>${n} ${esc(noun)}</b> match${n === 1 ? "es" : ""}`;
+      el.link.href = `properties.html?${params()}`;
+      el.link.firstChild.nodeValue = n === 0 ? "widen the search " : "see them ";
+      sizeSlots();
+      if (!reduceMotion) {
+        el.count.classList.add("is-swapping");
+        clearTimeout(fade);
+        fade = setTimeout(() => el.count.classList.remove("is-swapping"), 120);
+      }
+    };
+
+    el.purpose.addEventListener("change", () => { buildBudget(); update(); });
+    [el.what, el.loc, el.max].forEach((c) => c.addEventListener("change", update));
+    QB.addEventListener("submit", (e) => { e.preventDefault(); location.href = `properties.html?${params()}`; });
+    buildBudget();
+    update();
+    /* the display face lands after first paint, and the sentence size is a clamp() —
+       re-measure on both so a chip is never wider or narrower than its own words */
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(sizeSlots).catch(() => {});
+    let rt; addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(sizeSlots, 120); });
+  }
 
   /* ---------- Home: featured, projects, categories, agents ---------- */
   const P = window.PROPERTIES || [];

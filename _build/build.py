@@ -8,52 +8,44 @@ LD = '''<script type="application/ld+json">
 {"@context":"https://schema.org","@type":"RealEstateAgent","name":"UrbanNest Realty","image":"https://urbannest.vercel.app/assets/og-image.png","url":"https://urbannest.vercel.app/","telephone":"+91-98XXX-XXXXX","email":"hello@urbannestrealty.example","priceRange":"₹₹₹","areaServed":["Noida","Greater Noida","Gurgaon","Ghaziabad","Delhi NCR"],"address":{"@type":"PostalAddress","streetAddress":"[Replace with office address]","addressLocality":"Noida","addressRegion":"Uttar Pradesh","postalCode":"201309","addressCountry":"IN"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"10:00","closes":"19:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Sunday"],"opens":"11:00","closes":"17:00"}],"sameAs":["https://example.com/","https://example.com/","https://example.com/"]}
 </script>'''
 
-SEARCH_FIELDS = '''
-      <div class="sfield sfield--wide"><label for="{p}-loc">Location</label><select id="{p}-loc" name="loc"><option value="">All locations</option></select></div>
-      <div class="sfield sfield--type"><label for="{p}-type">Property type</label><select id="{p}-type" name="type"><option value="">All types</option></select></div>
-      <div class="sfield sfield--min"><label for="{p}-min">Min price</label><select id="{p}-min" name="min"><option value="">No min</option></select></div>
-      <div class="sfield sfield--max"><label for="{p}-max">Max price</label><select id="{p}-max" name="max"><option value="">No max</option></select></div>
-      <div class="sfield sfield--beds"><label for="{p}-beds">Bedrooms</label><select id="{p}-beds" name="beds"><option value="">Any</option><option value="1">1 BHK</option><option value="2">2 BHK</option><option value="3">3 BHK</option><option value="4">4 BHK</option><option value="5">5+ BHK</option></select></div>
-      <div class="sfield sfield--area"><label for="{p}-area">Min area (sq ft)</label><select id="{p}-area" name="area"><option value="">Any</option><option value="500">500+</option><option value="1000">1,000+</option><option value="1500">1,500+</option><option value="2000">2,000+</option><option value="3000">3,000+</option><option value="5000">5,000+</option></select></div>'''
+# The home hero's first-paint match count is read straight out of the listings file so a
+# regenerate can never leave a stale number on screen before main.js takes over.
+BUY_COUNT = len(re.findall(r'purpose: "buy"', open(os.path.join(ROOT, "js/properties-data.js"), encoding="utf-8").read()))
 
 # ============================ HOME ============================
 home = head("UrbanNest Realty — Premium Real Estate in Noida | Apartments, Villas, Penthouses, Plots & Commercial",
             "UrbanNest Realty is a premium real estate company in Noida. Search verified apartments, villas, penthouses, plots and commercial spaces across Sector 150, 137, 128, 76, 62, the Expressway and Greater Noida West. Book a free consultation.",
             "", LD) + header() + '''
 <main id="main">
-<!-- 1. HERO (with the property search bar floating under it — section 2) -->
-<section class="hero" aria-label="Welcome">
-  <div class="hero__media"><img src="assets/images/hero-home.jpg" alt="Two modern high-rise apartment towers with pale facades rising against a blue sky scattered with white cloud" width="1600" height="900" fetchpriority="high"></div>
-  <div class="hero__overlay"></div>
-  <div class="container hero__content">
-    <span class="eyebrow reveal">Premium real estate · Noida &amp; NCR</span>
-    <h1 class="reveal d1">Find a home that feels <em>made for you.</em></h1>
-    <p class="lead reveal d2">Curated apartments, villas, penthouses, plots and commercial spaces across Noida's finest sectors — with honest advice from consultants who know every tower by name.</p>
+<!-- 1. HERO — "the query builder": the first screen IS the search -->
+<section class="qhero" aria-labelledby="qhero-title">
+  <div class="qhero__media"><img src="assets/images/hero-home.jpg" alt="Two modern high-rise apartment towers with pale facades rising against a blue sky scattered with white cloud" width="1600" height="900" fetchpriority="high"></div>
+  <div class="container qhero__inner">
+    <span class="eyebrow reveal">Premium real estate &middot; Noida &amp; NCR</span>
+    <h1 class="qhero__title reveal d1" id="qhero-title">Find a home that feels <em>made for you.</em></h1>
+    <form class="qhero__builder" action="properties.html" method="get" role="search" aria-label="Build your property search" data-query-builder>
+      <input type="hidden" name="beds" value="" data-qb-beds>
+      <input type="hidden" name="type" value="" data-qb-type>
+      <p class="qhero__sentence">
+        <span class="qb-txt">I&rsquo;m looking to</span>
+        <span class="qb-slot"><label class="sr-only" for="qb-purpose">Buy or rent</label><select id="qb-purpose" name="purpose" data-qb-purpose><option value="buy">Buy</option></select><span class="qb-ghost" aria-hidden="true">Buy</span></span>
+        <span class="qb-txt" data-qb-article>a</span>
+        <span class="qb-slot"><label class="sr-only" for="qb-what">Size or property type</label><select id="qb-what" data-qb-what><option value="">home</option></select><span class="qb-ghost" aria-hidden="true">home</span></span>
+        <span class="qb-txt">in</span>
+        <span class="qb-slot"><label class="sr-only" for="qb-where">Location</label><select id="qb-where" name="loc" data-qb-loc><option value="">Noida &amp; NCR</option></select><span class="qb-ghost" aria-hidden="true">Noida &amp; NCR</span></span>
+        <span class="qb-txt" data-qb-prep>at</span>
+        <span class="qb-slot"><label class="sr-only" for="qb-budget">Budget</label><select id="qb-budget" name="max" data-qb-max><option value="">any price</option></select><span class="qb-ghost" aria-hidden="true">any price</span></span><span class="qb-stop">.</span>
+      </p>
+      <p class="qhero__result">
+        <span class="qhero__count" data-qb-count aria-live="polite" aria-atomic="true"><b>''' + str(BUY_COUNT) + ''' homes</b> match</span>
+        <a class="qhero__go" href="properties.html?purpose=buy" data-qb-link>see them <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <button class="qhero__go qhero__go--nojs" type="submit">see them <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </p>
+    </form>
     <div class="hero__actions reveal d3">
       <a class="btn btn--primary btn--lg" href="properties.html">Browse Properties</a>
       <a class="btn btn--outline-light btn--lg" href="contact.html#consult">Book a Consultation</a>
     </div>
-    <div class="hero__meta reveal d3">
-      <div><b>Sector 150 · 137 · 128 · 76 · 62</b>Noida &amp; Expressway</div>
-      <div><b>Buy · Rent · Invest</b>Residential &amp; commercial</div>
-      <div><b>RERA-aligned process</b>Verified listings</div>
-    </div>
-  </div>
-</section>
-
-<!-- 2. PROPERTY SEARCH -->
-<section class="search-section" id="search" aria-label="Property search">
-  <div class="container">
-    <form class="search-panel reveal" id="home-search" data-search-panel action="properties.html" method="get" role="search">
-      <input type="hidden" name="purpose" value="buy">
-      <div class="search-panel__top">
-        <div class="seg" role="group" aria-label="Buy or rent"><button type="button" data-purpose="buy" aria-pressed="true">Buy</button><button type="button" data-purpose="rent" aria-pressed="false">Rent</button></div>
-        <span class="search-panel__hint" data-search-hint>Search listings across Noida &amp; NCR</span>
-      </div>
-      <div class="search-panel__grid">''' + SEARCH_FIELDS.format(p="s") + '''
-        <button class="btn btn--dark" type="submit"><svg class="ic"><use href="#i-search"/></svg> Search</button>
-      </div>
-    </form>
   </div>
 </section>
 
@@ -186,7 +178,6 @@ home = head("UrbanNest Realty — Premium Real Estate in Noida | Apartments, Vil
   <div class="container">
     <div class="section-head reveal"><span class="eyebrow">Visit our office</span><h2>Find us in Sector 62, Noida</h2></div>
     <div class="location reveal">
-      <div class="location__map"><iframe data-map-embed src="about:blank" title="Map — UrbanNest Realty office, Noida" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
       <div class="location__info">
         <div class="info-row"><div class="why__icon"><svg class="ic"><use href="#i-pin"/></svg></div><div><h3>Office address</h3><address><span data-bind="addressLine1">[Address]</span><br><span data-bind="addressLine2">Noida, Uttar Pradesh</span></address><a class="link-arrow mt-1" data-href="map" href="#" target="_blank" rel="noopener">Get directions <svg class="ic"><use href="#i-arrow"/></svg></a></div></div>
         <div class="info-row"><div class="why__icon"><svg class="ic"><use href="#i-clock"/></svg></div><div><h3>Office hours</h3><div class="hours mt-1" data-hours></div></div></div>
@@ -266,7 +257,6 @@ detail = head("Property details — UrbanNest Realty, Noida", "Photos, price, fl
       <section class="prop-section" id="overview"><h2>Overview</h2><div data-p-desc></div></section>
       <section class="prop-section" id="amenities"><h2>Amenities</h2><ul class="amenities" data-p-amenities></ul></section>
       <section class="prop-section" id="floor-plan"><h2>Floor plan</h2><figure class="floor-plan"><img data-p-floorplan src="assets/images/floor-plans/floor-plan-placeholder.svg" alt="Indicative floor plan: living and dining, kitchen, balcony, three bedrooms and two bathrooms" loading="lazy" width="1600" height="1200"><figcaption class="floor-plan__bar"><span>Indicative layout — dimensions to be confirmed on site.</span><a class="btn btn--outline-dark btn--sm" data-p-floorplan-link href="assets/images/floor-plans/floor-plan-placeholder.svg" download><svg class="ic"><use href="#i-download"/></svg> Download floor plan</a></figcaption></figure></section>
-      <section class="prop-section prop-map" id="map"><h2>Location</h2><iframe data-p-map src="about:blank" title="Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe><p class="muted" data-p-mapnote></p><a class="link-arrow" data-p-maplink href="#" target="_blank" rel="noopener">Open in Google Maps <svg class="ic"><use href="#i-arrow"/></svg></a></section>
     </div>
     <aside class="prop-side">
       <div class="agent-card" data-p-agent></div>
@@ -446,7 +436,6 @@ contact = head("Contact UrbanNest Realty — Book a Consultation | Noida", "Get 
     </div>
   </div>
 </section>
-<section class="map-band" aria-label="Office location map"><iframe data-map-embed src="about:blank" title="Map — UrbanNest Realty office, Noida" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></section>
 </main>
 ''' + footer() + '''<script src="js/forms.js"></script></body></html>'''
 write("contact.html", contact)

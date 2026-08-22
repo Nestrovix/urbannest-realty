@@ -17,24 +17,41 @@ module.exports = async (browser, BASE, report) => {
     if (missing.length) report.missingAssets.push(...missing.map((m) => `data: ${m}`));
   } catch (e) { fail('data images exist', e); }
 
-  // 1. Home search → properties.html?type=villa&beds=4 applies filters
+  // 1. Home hero query builder: live count from the real data → properties.html?type=villa
   try {
     const p = await newPage();
     await p.goto(BASE + 'index.html', { waitUntil: 'networkidle' });
-    const locOpts = await p.$$eval('#s-loc option', (o) => o.length);
-    const minOptsBuy = await p.$$eval('#s-min option', (o) => o.map((x) => x.textContent));
-    await p.click('#home-search .seg button[data-purpose="rent"]');
-    const minOptsRent = await p.$$eval('#s-min option', (o) => o.map((x) => x.textContent));
-    await p.click('#home-search .seg button[data-purpose="buy"]');
-    await p.selectOption('#s-type', 'villa'); await p.selectOption('#s-beds', '4');
-    await Promise.all([p.waitForNavigation({ waitUntil: 'networkidle' }), p.click('#home-search button[type=submit]')]);
+    const read = () => p.$eval('[data-qb-count]', (e) => e.textContent.trim());
+    const optionCounts = await p.evaluate(() => ({
+      purpose: document.querySelectorAll('#qb-purpose option').length,
+      what: document.querySelectorAll('#qb-what option').length,
+      where: document.querySelectorAll('#qb-where option').length,
+      budget: document.querySelectorAll('#qb-budget option').length
+    }));
+    const firstPaint = await read();                 // default: Buy · home · Noida & NCR · any price
+    await p.selectOption('#qb-what', 'beds:3');
+    const threeBhk = await read();
+    await p.selectOption('#qb-where', 'Sector 150');
+    const threeBhk150 = await read();
+    await p.selectOption('#qb-purpose', 'rent');
+    const rentBudgetOpts = await p.$$eval('#qb-budget option', (o) => o.map((x) => x.textContent));
+    await p.selectOption('#qb-purpose', 'buy');
+    await p.selectOption('#qb-where', '');
+    await p.selectOption('#qb-what', 'type:villa');
+    const villas = await read();
+    const href = await p.$eval('[data-qb-link]', (a) => a.getAttribute('href'));
+    await Promise.all([p.waitForNavigation({ waitUntil: 'networkidle' }), p.click('[data-qb-link]')]);
     const url = p.url();
-    const cards = await p.$$eval('[data-results] .prop-card', (c) => c.map((x) => ({ type: x.dataset.type, beds: x.dataset.beds, purpose: x.dataset.purpose })));
-    const typeSel = await p.$eval('#f-type', (s) => s.value), bedsSel = await p.$eval('#f-beds', (s) => s.value);
-    const chips = await p.$$eval('[data-active-chips] .chip', (c) => c.map((x) => x.textContent.trim()));
-    C['home search → properties'] = { url: url.replace(BASE, ''), locationOptions: locOpts, buyPriceOpts: minOptsBuy.slice(0, 3), rentPriceOpts: minOptsRent.slice(0, 3), results: cards.length, allVilla4Beds: cards.length > 0 && cards.every((c) => c.type === 'villa' && c.beds === '4' && c.purpose === 'buy'), formReflects: typeSel === 'villa' && bedsSel === '4', chips };
+    const cards = await p.$$eval('[data-results] .prop-card', (c) => c.map((x) => ({ type: x.dataset.type, purpose: x.dataset.purpose })));
+    const typeSel = await p.$eval('#f-type', (s) => s.value);
+    C['home query builder → properties'] = {
+      optionCounts, firstPaint, threeBhk, threeBhk150, villas, rentBudgetOpts: rentBudgetOpts.slice(0, 3),
+      href, url: url.replace(BASE, ''), results: cards.length,
+      allVillaBuy: cards.length > 0 && cards.every((c) => c.type === 'villa' && c.purpose === 'buy'),
+      formReflects: typeSel === 'villa'
+    };
     await p.close();
-  } catch (e) { fail('home search → properties', e); }
+  } catch (e) { fail('home query builder → properties', e); }
 
   // 2. Listing page: live filter counts, sort, buy/rent toggle, empty state, reset, URL sync, agent param
   try {

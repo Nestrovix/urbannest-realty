@@ -4,7 +4,7 @@ Static, dependency-free website · 7 pages + privacy · Vercel-ready · built by
 
 ```
 urbannest/
-├── index.html              Home (12 sections in the brief's order: hero → search → featured → projects → categories → why us → agents → stats → testimonials → consultation CTA → location → footer)
+├── index.html              Home (query-builder hero → featured → projects → categories → why us → agents → stats → testimonials → consultation CTA → location → footer)
 ├── properties.html         Listing — search + filters (location, type, price, beds, area, keyword), Buy/Rent toggle, sort, counts, active chips, empty state, URL params, mobile bottom-sheet filters with "Apply"
 ├── property.html           Property details (?id=…) — gallery + thumbs + lightbox, price (₹ Cr/L), key facts, amenities, floor plan + download, map embed, agent card, enquiry form, similar properties, breadcrumb, mobile sticky Call/WhatsApp/Enquire bar
 ├── projects.html           New launches — status filter chips, RERA placeholders, enquire/brochure CTAs
@@ -46,11 +46,11 @@ urbannest/
 | Schema (`index.html`, `contact.html`) | Update address/phone/sameAs in the RealEstateAgent JSON-LD block; `property.html` emits a RealEstateListing block automatically from the data |
 
 ## 2 · How the features work
-- **Search (home)** — the hero panel is a GET form: submitting goes to `properties.html?purpose=buy&type=villa&beds=4…` (empty fields are dropped). Buy/Rent toggle switches the price ranges (₹ lakh/crore vs ₹/month).
+- **Search (home)** — the hero *is* the search: a sentence ("I'm looking to **Buy** a **3 BHK** in **Sector 150** under **₹2 Cr**") completed with four inline `<select>`s inside a GET form. Every option list is derived from the data at runtime — purposes and bedroom counts present in `PROPERTIES`, `PROPERTY_TYPES`, `LOCATIONS`, and the `UN.PRICE_STEPS` rungs at least one listing sits under. A live count runs the same predicate `properties.js` filters with, and "see them" carries the choice over as `properties.html?purpose=…&loc=…&type=…&beds=…&max=…` (empty fields dropped). The first-paint count is baked in by `_build/build.py` from the data file, so the hero is never blank or wrong before `main.js` runs.
 - **Listing** — `properties.js` reads the URL params, fills the sidebar form and filters `PROPERTIES` live on every change; the URL is kept in sync (`history.replaceState`) so results are shareable. Supported params: `purpose, loc, type, min, max, beds, area, q, agent, sort`. Bedrooms match exactly (5 = 5+). On screens ≤ 900 px the sidebar becomes a bottom sheet with an **Apply** button.
 - **Property details** — `property.html?id=<id>` renders from the data file (title, ₹ price formatting, facts, gallery, amenities, floor plan, Google Maps embed using the listing's `locality`, agent card, similar listings, JSON-LD). Unknown ids show a "Property not found" state with suggestions.
 - **Price formatting** — `UN.fmtPrice(18500000)` → `₹1.85 Cr`, `9200000` → `₹92 L`, rent `42000` → `₹42,000/mo`.
-- **Maps** — Google Maps iframe embeds need no API key. Office map: `mapEmbed` in config; property map: built from `locality`.
+- **Maps** — the site embeds none. The "Get directions" links carry `data-href="map"` and currently resolve to `#`; point them at your own maps URL in `UN.bind` (`js/main.js`) if you want them live.
 - **WhatsApp** — every CTA deep-links to `wa.me/<number>` with a context message (property title + URL for enquiries; agent-specific numbers from `agents-data.js`).
 - **Count-up stats** — values animate from 0 when scrolled into view (respects reduced motion); the HTML contains the final values so they read correctly without JS.
 

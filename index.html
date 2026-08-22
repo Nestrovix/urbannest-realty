@@ -85,44 +85,35 @@
   </div>
 </div>
 <main id="main">
-<!-- 1. HERO (with the property search bar floating under it — section 2) -->
-<section class="hero" aria-label="Welcome">
-  <div class="container hero__content">
-    <span class="eyebrow reveal">Premium real estate · Noida &amp; NCR</span>
-    <h1 class="reveal d1">Find a home that feels <em>made for you.</em></h1>
-    <p class="lead reveal d2">Curated apartments, villas, penthouses, plots and commercial spaces across Noida's finest sectors — with honest advice from consultants who know every tower by name.</p>
+<!-- 1. HERO — "the query builder": the first screen IS the search -->
+<section class="qhero" aria-labelledby="qhero-title">
+  <div class="qhero__media"><img src="assets/images/hero-home.jpg" alt="Two modern high-rise apartment towers with pale facades rising against a blue sky scattered with white cloud" width="1600" height="900" fetchpriority="high"></div>
+  <div class="container qhero__inner">
+    <span class="eyebrow reveal">Premium real estate &middot; Noida &amp; NCR</span>
+    <h1 class="qhero__title reveal d1" id="qhero-title">Find a home that feels <em>made for you.</em></h1>
+    <form class="qhero__builder" action="properties.html" method="get" role="search" aria-label="Build your property search" data-query-builder>
+      <input type="hidden" name="beds" value="" data-qb-beds>
+      <input type="hidden" name="type" value="" data-qb-type>
+      <p class="qhero__sentence">
+        <span class="qb-txt">I&rsquo;m looking to</span>
+        <span class="qb-slot"><label class="sr-only" for="qb-purpose">Buy or rent</label><select id="qb-purpose" name="purpose" data-qb-purpose><option value="buy">Buy</option></select><span class="qb-ghost" aria-hidden="true">Buy</span></span>
+        <span class="qb-txt" data-qb-article>a</span>
+        <span class="qb-slot"><label class="sr-only" for="qb-what">Size or property type</label><select id="qb-what" data-qb-what><option value="">home</option></select><span class="qb-ghost" aria-hidden="true">home</span></span>
+        <span class="qb-txt">in</span>
+        <span class="qb-slot"><label class="sr-only" for="qb-where">Location</label><select id="qb-where" name="loc" data-qb-loc><option value="">Noida &amp; NCR</option></select><span class="qb-ghost" aria-hidden="true">Noida &amp; NCR</span></span>
+        <span class="qb-txt" data-qb-prep>at</span>
+        <span class="qb-slot"><label class="sr-only" for="qb-budget">Budget</label><select id="qb-budget" name="max" data-qb-max><option value="">any price</option></select><span class="qb-ghost" aria-hidden="true">any price</span></span><span class="qb-stop">.</span>
+      </p>
+      <p class="qhero__result">
+        <span class="qhero__count" data-qb-count aria-live="polite" aria-atomic="true"><b>15 homes</b> match</span>
+        <a class="qhero__go" href="properties.html?purpose=buy" data-qb-link>see them <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <button class="qhero__go qhero__go--nojs" type="submit">see them <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </p>
+    </form>
     <div class="hero__actions reveal d3">
       <a class="btn btn--primary btn--lg" href="properties.html">Browse Properties</a>
-      <a class="btn btn--outline-dark btn--lg" href="contact.html#consult">Book a Consultation</a>
+      <a class="btn btn--outline-light btn--lg" href="contact.html#consult">Book a Consultation</a>
     </div>
-    <div class="hero__media reveal d2"><img src="assets/images/hero-home.jpg" alt="Two modern high-rise apartment towers with pale facades rising against a blue sky scattered with white cloud" width="1600" height="900" fetchpriority="high"></div>
-    <div class="hero__meta reveal d3">
-      <div><b>Sector 150 · 137 · 128 · 76 · 62</b>Noida &amp; Expressway</div>
-      <div><b>Buy · Rent · Invest</b>Residential &amp; commercial</div>
-      <div><b>RERA-aligned process</b>Verified listings</div>
-    </div>
-  </div>
-</section>
-
-<!-- 2. PROPERTY SEARCH -->
-<section class="search-section" id="search" aria-label="Property search">
-  <div class="container">
-    <form class="search-panel reveal" id="home-search" data-search-panel action="properties.html" method="get" role="search">
-      <input type="hidden" name="purpose" value="buy">
-      <div class="search-panel__top">
-        <div class="seg" role="group" aria-label="Buy or rent"><button type="button" data-purpose="buy" aria-pressed="true">Buy</button><button type="button" data-purpose="rent" aria-pressed="false">Rent</button></div>
-        <span class="search-panel__hint" data-search-hint>Search listings across Noida &amp; NCR</span>
-      </div>
-      <div class="search-panel__grid">
-      <div class="sfield sfield--wide"><label for="s-loc">Location</label><select id="s-loc" name="loc"><option value="">All locations</option></select></div>
-      <div class="sfield sfield--type"><label for="s-type">Property type</label><select id="s-type" name="type"><option value="">All types</option></select></div>
-      <div class="sfield sfield--min"><label for="s-min">Min price</label><select id="s-min" name="min"><option value="">No min</option></select></div>
-      <div class="sfield sfield--max"><label for="s-max">Max price</label><select id="s-max" name="max"><option value="">No max</option></select></div>
-      <div class="sfield sfield--beds"><label for="s-beds">Bedrooms</label><select id="s-beds" name="beds"><option value="">Any</option><option value="1">1 BHK</option><option value="2">2 BHK</option><option value="3">3 BHK</option><option value="4">4 BHK</option><option value="5">5+ BHK</option></select></div>
-      <div class="sfield sfield--area"><label for="s-area">Min area (sq ft)</label><select id="s-area" name="area"><option value="">Any</option><option value="500">500+</option><option value="1000">1,000+</option><option value="1500">1,500+</option><option value="2000">2,000+</option><option value="3000">3,000+</option><option value="5000">5,000+</option></select></div>
-        <button class="btn btn--dark" type="submit"><svg class="ic"><use href="#i-search"/></svg> Search</button>
-      </div>
-    </form>
   </div>
 </section>
 

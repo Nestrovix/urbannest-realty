@@ -208,34 +208,60 @@ h1,h2,h3,h4,.eyebrow,.prow__loc,.prow__cfg,.project__rera,
 .mobile-nav__meta .ic{width:17px;height:17px;flex:none;color:var(--blue-lt)}
 body.nav-open{overflow:hidden}
 
-/* ---------- Home masthead: type first, then a compact index band ---------- */
-.hero{position:relative;background:var(--surface);border-bottom:1px solid var(--line);overflow:hidden}
-.hero__media{position:relative;align-self:end}
-.hero__media img{width:100%;height:100%;max-height:340px;object-fit:cover;border:1px solid var(--line);background:var(--paper)}
-.hero__overlay{display:none}
-.hero__content{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);column-gap:clamp(1.5rem,4vw,3.25rem);row-gap:0;align-content:start;align-items:end;padding-block:clamp(2.25rem,5vw,3.25rem) 0}
-.hero__content > .hero__media{grid-column:2;grid-row:1/span 4;align-self:end}
-.hero__content h1{margin-top:.75rem;max-width:18ch;grid-column:1}
-.hero__content .eyebrow,.hero__content .lead,.hero__actions{grid-column:1}
-/* Spectral sets ~4% wider than the serif it replaces; 52ch (520px) is the measure that
-   keeps this lead in the same three well-filled lines instead of dropping a one-word last line. */
-.hero__content .lead{margin-top:1rem;max-width:52ch}
-.hero__actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem}
-/* index band — three aligned columns with hairlines and tabular figures */
-.hero__meta{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:clamp(2rem,4vw,3rem);border-top:2px solid var(--ink);font-family:var(--font-head);font-size:.86rem;color:var(--muted);font-variant-numeric:lining-nums tabular-nums}
-.hero__meta > div{padding:.9rem 1.25rem .9rem 0;border-right:1px solid var(--line)}
-.hero__meta > div:last-child{border-right:0}
-.hero__meta > div + div{padding-left:1.25rem}
-.hero__meta b{display:block;color:var(--ink);font-weight:700;letter-spacing:-.009em;font-size:clamp(1.03rem,1.55vw,1.22rem);margin-bottom:.2rem}
+/* ---------- Home masthead: THE QUERY BUILDER ----------
+   The first screen is the search. A scrimmed architectural photograph carries a
+   sentence the visitor completes with inline native <select>s; a live count of the
+   real listings sits under it and carries the selection into properties.html. */
+.qhero{position:relative;background:var(--ink);color:var(--on-dark);border-bottom:1px solid var(--ink);overflow:hidden;isolation:isolate}
+.qhero__media{position:absolute;inset:0;z-index:0}
+.qhero__media img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;filter:grayscale(.72) contrast(.95) brightness(1.06)}
+/* two scrims: a directional one that keeps the towers legible on the right, and a
+   base wash that holds the sentence at ≥ 4.5:1 wherever the photograph goes pale */
+.qhero__media::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(101deg,rgba(23,24,27,.95) 0%,rgba(23,24,27,.9) 34%,rgba(23,24,27,.6) 68%,rgba(23,24,27,.36) 100%),
+  linear-gradient(180deg,rgba(23,24,27,.45) 0%,rgba(23,24,27,.2) 40%,rgba(23,24,27,.62) 100%)}
+.qhero__inner{position:relative;z-index:1;padding-block:clamp(2.5rem,6vw,4.5rem) clamp(2.25rem,5vw,3.75rem)}
+.qhero .eyebrow{color:var(--blue-lt)}
+.qhero .eyebrow::before{background:var(--blue-lt)}
+.qhero__title{margin-top:.85rem;max-width:16ch;font-size:clamp(1.36rem,2.3vw,2.06rem);font-weight:500;letter-spacing:-.014em;color:var(--on-dark)}
+.qhero__title em{color:var(--blue-lt);text-decoration-color:rgba(138,166,255,.4)}
 
-/* ---------- Query bar (was the floating search card) ---------- */
-.search-section{background:var(--paper);border-bottom:1px solid var(--line);position:relative;z-index:5}
-.search-panel{padding-block:1.1rem 1.35rem;position:relative}
-.search-panel__top{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:.9rem}
-.search-panel__hint{font-family:var(--font-head);font-size:.81rem;letter-spacing:.02em;color:var(--muted);font-variant-numeric:lining-nums tabular-nums}
-.search-panel__grid{display:grid;grid-template-columns:1.15fr 1fr .95fr .95fr .85fr .95fr auto;gap:0 1px;align-items:end;background:var(--line);border:1px solid var(--line)}
-.search-panel__grid > .sfield{background:var(--surface)}
-.search-panel__grid .btn{border-radius:0}
+/* the sentence */
+.qhero__builder{margin-top:clamp(1.5rem,3.5vw,2.5rem);max-width:min(100%,54rem);border-top:2px solid rgba(244,245,247,.28);padding-top:clamp(1.1rem,2.5vw,1.6rem)}
+.qhero__sentence{max-width:none;font-family:var(--font-head);font-weight:400;font-size:clamp(1.62rem,4vw,2.95rem);line-height:1.44;letter-spacing:-.02em;color:var(--on-dark-muted);font-variant-numeric:lining-nums proportional-nums;text-wrap:pretty}
+.qb-txt{color:var(--on-dark-muted)}
+.qb-stop{color:var(--blue-lt)}
+.qb-slot{display:inline-block;position:relative;max-width:100%}
+/* the ghost carries the *current* label so the control is only as wide as what it says —
+   a bare <select> would size itself to its widest option and blow the sentence apart */
+.qb-ghost{position:absolute;left:0;top:0;visibility:hidden;pointer-events:none;white-space:pre;font-weight:700;padding:0 1.05em .04em .04em}
+.qb-slot select{appearance:none;-webkit-appearance:none;font:inherit;font-weight:700;letter-spacing:inherit;color:var(--on-dark);background:transparent;border:0;border-bottom:2px solid rgba(138,166,255,.55);border-radius:0;padding:0 1.05em .04em .04em;margin:0;max-width:100%;cursor:pointer;transition:border-color var(--dur-1) var(--ease),color var(--dur-1) var(--ease)}
+.qb-slot select:hover{border-bottom-color:var(--blue-lt)}
+.qb-slot select:focus-visible{outline:2px solid var(--blue-lt);outline-offset:3px}
+.qb-slot select option,.qb-slot select optgroup{color:var(--ink);background:var(--surface);font-size:1rem;font-weight:400;letter-spacing:normal}
+.qb-slot::after{content:"";position:absolute;right:.3em;top:.44em;width:.36em;height:.36em;border-right:.11em solid var(--blue-lt);border-bottom:.11em solid var(--blue-lt);transform:rotate(45deg);pointer-events:none}
+
+/* the live count */
+.qhero__result{max-width:none;display:flex;align-items:baseline;flex-wrap:wrap;gap:.15rem .85rem;margin-top:clamp(1.15rem,2.6vw,1.8rem);font-family:var(--font-head);font-size:clamp(.98rem,1.35vw,1.14rem);color:var(--on-dark-muted)}
+.qhero__count b{display:inline-block;color:var(--on-dark);font-weight:700;font-size:clamp(1.32rem,2.1vw,1.72rem);letter-spacing:-.015em;margin-right:.3rem;font-variant-numeric:lining-nums tabular-nums;transition:opacity var(--dur-1) var(--ease)}
+.qhero__count.is-swapping b{opacity:.35}
+.qhero__go{display:inline-flex;align-items:center;gap:.45rem;font-weight:700;font-size:clamp(1rem,1.35vw,1.14rem);color:var(--blue-lt);border-bottom:1px solid rgba(138,166,255,.45);padding-bottom:.12rem;transition:color var(--dur-1) var(--ease),border-color var(--dur-1) var(--ease)}
+.qhero__go:hover{color:var(--on-dark);border-bottom-color:var(--on-dark)}
+.qhero__go .ic{width:18px;height:18px;transition:transform var(--dur-1) var(--ease)}
+.qhero__go:hover .ic{transform:translateX(3px)}
+html.js .qhero__go--nojs{display:none}
+html:not(.js) [data-qb-link]{display:none}
+.qhero .hero__actions{margin-top:clamp(1.75rem,4vw,2.6rem)}
+@media (max-width:900px){
+  .qhero__media::after{background:linear-gradient(180deg,rgba(23,24,27,.92) 0%,rgba(23,24,27,.85) 46%,rgba(23,24,27,.94) 100%)}
+  .qhero__title{max-width:none}
+}
+.hero__actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem}
+@media (prefers-reduced-motion:reduce){
+  .qhero__count b,.qhero__go,.qhero__go .ic,.qb-slot select{transition:none}
+}
+
+/* ---------- Filter fields (properties listing) ---------- */
 .sfield{display:grid;gap:.15rem;min-width:0;padding:.5rem .75rem .55rem}
 .sfield label{font-family:var(--font-head);font-size:.65rem;letter-spacing:.11em;text-transform:uppercase;font-weight:700;color:var(--muted)}
 .sfield select,.sfield input{width:100%;min-height:30px;padding:.15rem 1.5rem .15rem 0;font-family:var(--font-head);font-size:16px;font-weight:500;letter-spacing:-.005em;color:var(--ink);background:transparent;border:0;border-radius:0;text-overflow:ellipsis}
@@ -244,7 +270,6 @@ body.nav-open{overflow:hidden}
 .sfield select:focus,.sfield input:focus{outline:none}
 .sfield:focus-within{box-shadow:inset 0 0 0 2px var(--blue)}
 .sfield:focus-within label{color:var(--blue)}
-.search-panel .btn{min-height:100%;align-self:stretch}
 /* segmented control — squared, not a pill */
 .seg{display:inline-flex;border:1px solid var(--line-2);border-radius:0;background:var(--surface)}
 .seg button{min-height:38px;padding:0 1.05rem;font-family:var(--font-head);font-weight:500;font-size:.88rem;color:var(--muted);transition:background var(--dur-1),color var(--dur-1)}
@@ -694,8 +719,6 @@ p.center,.sample-note.center{margin-inline:auto}
   .prow__thumb{width:84px}
 }
 @media (max-width:1200px){
-  .search-panel__grid{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .search-panel__grid .btn{grid-column:1/-1;min-height:48px}
   .project-grid,.agent-grid,.reviews-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .cat-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
   .why-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -738,11 +761,9 @@ p.center,.sample-note.center{margin-inline:auto}
   .split__media .frame--tall{right:0;bottom:-1rem;width:36%}
   .contact-layout,.cta-layout{grid-template-columns:1fr}
   .section-head.split{flex-direction:column;align-items:start}
-  .hero__content,.page-hero__content{grid-template-columns:1fr}
-  .hero__content > .hero__media,.page-hero__content > .hero__media{grid-column:1;grid-row:auto;margin-top:1.5rem}
-  .hero__content{padding-bottom:0}
-  .hero__media img,.page-hero .hero__media img{max-height:200px}
-  .search-panel__grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .page-hero__content{grid-template-columns:1fr}
+  .page-hero__content > .hero__media{grid-column:1;grid-row:auto;margin-top:1.5rem}
+  .page-hero .hero__media img{max-height:200px}
   /* property detail */
   .prop-layout{grid-template-columns:1fr}
   .prop-side{position:static}
@@ -776,13 +797,7 @@ p.center,.sample-note.center{margin-inline:auto}
   .timeline div + div{padding-left:0}
   .cat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .stats{grid-template-columns:1fr 1fr}
-  .hero__meta{grid-template-columns:1fr}
-  .hero__meta > div{border-right:0;border-bottom:1px solid var(--line);padding:.7rem 0}
-  .hero__meta > div + div{padding-left:0}
   .hero__actions .btn{flex:1 1 100%}
-  .search-panel__grid{grid-template-columns:1fr 1fr}
-  .search-panel__grid .sfield--wide{grid-column:1/-1}
-  .search-panel__grid .sfield--type{order:1}.search-panel__grid .sfield--beds{order:2}.search-panel__grid .sfield--min{order:3}.search-panel__grid .sfield--max{order:4}.search-panel__grid .sfield--area{order:5;grid-column:1/-1}.search-panel__grid .btn{order:6}
   .lightbox__prev,.lightbox__next{top:auto;bottom:1.1rem;transform:none}
   .lightbox__prev{left:1.1rem}.lightbox__next{right:1.1rem}
   .lightbox__caption{bottom:5rem}
@@ -803,7 +818,6 @@ p.center,.sample-note.center{margin-inline:auto}
 }
 @media (max-width:380px){
   .seg button{padding:0 .85rem}
-  .search-panel__grid{grid-template-columns:1fr}
   .stats{grid-template-columns:1fr}
   .stat{border-right:0}
   .stat + .stat{padding-left:0}

@@ -353,7 +353,7 @@ about = head("About UrbanNest Realty — Premium Real Estate Advisory in Noida",
       <div class="split__body reveal"><span class="eyebrow">Our story</span><h2>Built on the ground in Noida</h2>
         <p>UrbanNest Realty started with a simple frustration: too many listings, too little honest advice. We began as a two-person advisory working the Expressway sectors, visiting every flat before recommending it and saying no to projects we wouldn't buy ourselves.</p>
         <p>Today we're a small team of specialists covering luxury homes, first homes, villas, plots and commercial space across Noida, Greater Noida West and the wider NCR — still visiting every property, still saying no when it's warranted.</p>
-        <p class="muted" style="font-size:.85rem">[Founder name, founding year and origin story — replace with the real version.]</p>
+        <p class="muted" style="font-size:.92rem">[Founder name, founding year and origin story — replace with the real version.]</p>
         <blockquote class="quote">"We'd rather lose a deal than recommend the wrong tower."<cite>Founder, UrbanNest Realty</cite></blockquote></div>
       <div class="split__media reveal d1"><div class="frame"><img src="assets/images/about-office.jpg" alt="A glass-walled meeting room with a long table and stacking chairs, seen from the office floor" loading="lazy" width="1000" height="750"></div><div class="frame frame--tall"><img src="assets/images/about-site-visit.jpg" alt="A consultant in a dark suit holding a set of keys and a clipboard during a site visit" loading="lazy" width="600" height="800"></div></div>
     </div>
@@ -455,7 +455,7 @@ write("contact.html", contact)
 priv = head("Privacy Policy — UrbanNest Realty", "How UrbanNest Realty handles the information you share through this website.", "privacy.html", '<meta name="robots" content="noindex">') + header() + '''
 <main id="main">''' + page_hero("assets/images/hero-contact.jpg", "Legal", "Privacy policy", "Plain-English summary of how we handle your information.", "Privacy", compact=True) + '''
 <section class="section section--white"><div class="container prose" style="max-width:760px">
-<p class="muted" style="font-size:.85rem">[Template — have this reviewed and completed by your legal advisor before launch.]</p>
+<p class="muted" style="font-size:.92rem">[Template — have this reviewed and completed by your legal advisor before launch.]</p>
 <h2>What we collect</h2><p>When you enquire about a property, request a call back or contact us, you share your name, phone number and optionally your email, budget and message. Submissions are sent to us via WhatsApp (and, if configured, our CRM or email) so we can respond to you.</p>
 <h2>How we use it</h2><p>Only to respond to your enquiry, arrange site visits and share relevant listings or project details. We don't sell your details to third parties. With your consent we may share your requirement with a developer or owner to arrange a visit.</p>
 <h2>Cookies &amp; analytics</h2><p>This site does not set tracking cookies by default. If analytics are enabled, they are anonymised. Embedded maps are served by Google and subject to Google's privacy policy.</p>

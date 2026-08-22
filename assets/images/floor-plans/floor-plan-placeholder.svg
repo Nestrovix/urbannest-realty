@@ -19,7 +19,7 @@
 <path d="M400 860a70 70 0 0 0 -70 70"/><path d="M330 860v70"/>
 <path d="M900 760a70 70 0 0 0 -70 -70"/><path d="M900 690v70"/>
 </g>
-<g font-family="'Bricolage Grotesque',system-ui,-apple-system,'Segoe UI',sans-serif" fill="#17181B" font-size="24" font-weight="600" text-anchor="middle" letter-spacing="1.2">
+<g font-family="'Schibsted Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" fill="#17181B" font-size="24" font-weight="600" text-anchor="middle" letter-spacing="1.2">
 <text x="480" y="370">LIVING / DINING</text><text x="480" y="410" font-weight="400" fill="#63666E" letter-spacing="0">22' × 14'</text>
 <text x="890" y="370">MASTER BEDROOM</text><text x="890" y="410" font-weight="400" fill="#63666E" letter-spacing="0">16' × 12'</text>
 <text x="1210" y="370">BEDROOM 2</text><text x="1210" y="410" font-weight="400" fill="#63666E" letter-spacing="0">13' × 11'</text>
@@ -32,8 +32,8 @@
 <g fill="none" stroke="#17181B" stroke-width="3">
 <circle cx="1470" cy="1105" r="30"/><path d="M1470 1082v46M1470 1082l-9 14M1470 1082l9 14"/>
 </g>
-<text x="1470" y="1160" font-family="'Bricolage Grotesque',system-ui,sans-serif" font-size="20" font-weight="600" fill="#17181B" text-anchor="middle" letter-spacing="1.5">N</text>
+<text x="1470" y="1160" font-family="'Schibsted Grotesk',system-ui,sans-serif" font-size="20" font-weight="600" fill="#17181B" text-anchor="middle" letter-spacing="1.5">N</text>
 <rect x="60" y="1082" width="14" height="4" fill="#2F5BEA"/>
-<text x="86" y="1092" font-family="'Bricolage Grotesque',system-ui,sans-serif" font-size="20" font-weight="600" fill="#17181B" letter-spacing="1.2">INDICATIVE FLOOR PLAN</text>
-<text x="60" y="1140" font-family="'Bricolage Grotesque',system-ui,sans-serif" font-size="19" fill="#63666E">Schematic layout — not to scale. Replace with the sanctioned plan and link the PDF in properties-data.js</text>
+<text x="86" y="1092" font-family="'Schibsted Grotesk',system-ui,sans-serif" font-size="20" font-weight="600" fill="#17181B" letter-spacing="1.2">INDICATIVE FLOOR PLAN</text>
+<text x="60" y="1140" font-family="'Schibsted Grotesk',system-ui,sans-serif" font-size="19" fill="#63666E">Schematic layout — not to scale. Replace with the sanctioned plan and link the PDF in properties-data.js</text>
 </svg>

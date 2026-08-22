@@ -71,7 +71,7 @@ fp = '''<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewB
 <path d="M220 860h520"/>
 </g>
 <g fill="none" stroke="#B8924A" stroke-width="4"><path d="M560 560a80 80 0 0 1 80 80"/><path d="M640 560v80"/><path d="M1040 640a70 70 0 0 1 70 70"/><path d="M1110 640v70"/><path d="M400 860a70 70 0 0 0 -70 70"/><path d="M330 860v70"/><path d="M900 760a70 70 0 0 0 -70 -70"/><path d="M900 690v70"/></g>
-<g font-family="Schibsted Grotesk,system-ui,sans-serif" fill="#1C1C1E" font-size="24" font-weight="600" text-anchor="middle">
+<g font-family="Familjen Grotesk,system-ui,sans-serif" fill="#1C1C1E" font-size="24" font-weight="700" text-anchor="middle">
 <text x="480" y="370">LIVING / DINING</text><text x="480" y="410" font-weight="400" fill="#6B6B70">22' × 14'</text>
 <text x="890" y="370">MASTER BEDROOM</text><text x="890" y="410" font-weight="400" fill="#6B6B70">16' × 12'</text>
 <text x="1210" y="370">BEDROOM 2</text><text x="1210" y="410" font-weight="400" fill="#6B6B70">13' × 11'</text>
